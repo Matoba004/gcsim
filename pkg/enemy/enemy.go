@@ -52,6 +52,24 @@ func New(core *core.Core, p info.EnemyProfile) *Enemy {
 		e.hp = p.HP
 		e.maxhp = p.HP
 	}
+	if p.Element != attributes.NoElement {
+		e.ApplySelfInfusion(p.Element, 100, -1)
+
+		var mod info.ReactionModKey
+		switch p.Element {
+		case attributes.Electro:
+			mod = info.ReactionModKeyElectro
+		case attributes.Hydro:
+			mod = info.ReactionModKeyHydro
+		case attributes.Pyro:
+			mod = info.ReactionModKeyPyro
+		case attributes.Cryo:
+			mod = info.ReactionModKeyCryo
+		case attributes.Dendro:
+			mod = info.ReactionModKeyDendro
+		}
+		e.Reactable.SetMutable(mod, false)
+	}
 	return e
 }
 
@@ -79,4 +97,43 @@ func (e *Enemy) SetDirection(trg info.Point) {}
 func (e *Enemy) SetDirectionToClosestEnemy() {}
 func (e *Enemy) CalcTempDirection(trg info.Point) info.Point {
 	return info.DefaultDirection()
+}
+
+func (e *Enemy) ApplySelfInfusion(ele attributes.Element, dur info.Durability, f int) {
+	e.Core.Log.NewEventBuildMsg(glog.LogEnemyEvent, -1, "self infusion applied to enemy: "+ele.String()).
+		Write("index", e.Key()).
+		Write("durability", dur).
+		Write("duration", f)
+	// we're assuming self infusion isn't subject to 0.8x multiplier
+	// also no real sanity check
+	if ele == attributes.Frozen {
+		return
+	}
+	var mod info.ReactionModKey
+	switch ele {
+	case attributes.Electro:
+		mod = info.ReactionModKeyElectro
+	case attributes.Hydro:
+		mod = info.ReactionModKeyHydro
+	case attributes.Pyro:
+		mod = info.ReactionModKeyPyro
+	case attributes.Cryo:
+		mod = info.ReactionModKeyCryo
+	case attributes.Dendro:
+		mod = info.ReactionModKeyDendro
+	}
+
+	// we're assuming refill maintains the same decay rate?
+	if e.GetAuraDurability(mod) > info.ZeroDur {
+		// make sure we're not adding more than incoming
+		if e.GetAuraDurability(mod) < dur {
+			e.SetAuraDurability(mod, dur)
+		}
+		return
+	}
+	// otherwise calculate decay based on specified f (in frames)
+	e.SetAuraDurability(mod, dur)
+	if f > 0 {
+		e.SetAuraDecayRate(mod, dur/info.Durability(f))
+	}
 }

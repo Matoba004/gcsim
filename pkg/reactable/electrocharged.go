@@ -118,10 +118,14 @@ func (r *Reactable) TryAddEC(a *info.AttackEvent) bool {
 }
 
 func (r *Reactable) waneEC() {
-	r.Durability[info.ReactionModKeyElectro] -= 10
-	r.Durability[info.ReactionModKeyElectro] = max(0, r.Durability[info.ReactionModKeyElectro])
-	r.Durability[info.ReactionModKeyHydro] -= 10
-	r.Durability[info.ReactionModKeyHydro] = max(0, r.Durability[info.ReactionModKeyHydro])
+	if r.Mutable[info.ReactionModKeyElectro] {
+		r.Durability[info.ReactionModKeyElectro] -= 10
+		r.Durability[info.ReactionModKeyElectro] = max(0, r.Durability[info.ReactionModKeyElectro])
+	}
+	if r.Mutable[info.ReactionModKeyHydro] {
+		r.Durability[info.ReactionModKeyHydro] -= 10
+		r.Durability[info.ReactionModKeyHydro] = max(0, r.Durability[info.ReactionModKeyHydro])
+	}
 	r.core.Log.NewEvent("ec wane",
 		glog.LogElementEvent,
 		-1,

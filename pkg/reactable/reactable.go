@@ -13,6 +13,7 @@ import (
 type Reactable struct {
 	Durability [info.ReactionModKeyEnd]info.Durability
 	DecayRate  [info.ReactionModKeyEnd]info.Durability
+	Mutable    [info.ReactionModKeyEnd]bool
 	// Source     []int //source frame of the aura
 	self info.Target
 	core *core.Core
@@ -47,6 +48,9 @@ const (
 )
 
 func (r *Reactable) Init(self info.Target, c *core.Core) *Reactable {
+	for i := info.ReactionModKeyInvalid; i < info.ReactionModKeyEnd; i++ {
+		r.Mutable[i] = true
+	}
 	r.self = self
 	r.core = c
 	r.DecayRate[info.ReactionModKeyFrozen] = frzDecayCap
@@ -61,6 +65,10 @@ func (r *Reactable) Init(self info.Target, c *core.Core) *Reactable {
 	r.swirlPyroGCD = -1
 	r.crystallizeGCD = -1
 	return r
+}
+
+func (r *Reactable) SetMutable(mod info.ReactionModKey, value bool) {
+	r.Mutable[mod] = value
 }
 
 func (r *Reactable) ActiveAuraString() []string {
@@ -203,6 +211,9 @@ func (r *Reactable) attachOrRefillNormalEle(mod info.ReactionModKey, dur info.Du
 }
 
 func (r *Reactable) attachOverlap(mod info.ReactionModKey, amt, length info.Durability) {
+	if !r.Mutable[mod] {
+		return
+	}
 	if r.Durability[mod] > info.ZeroDur {
 		add := max(amt-r.Durability[mod], 0)
 		if add > 0 {
@@ -217,6 +228,9 @@ func (r *Reactable) attachOverlap(mod info.ReactionModKey, amt, length info.Dura
 }
 
 func (r *Reactable) attachOverlapRefreshDuration(mod info.ReactionModKey, amt, length info.Durability) {
+	if !r.Mutable[mod] {
+		return
+	}
 	if amt < r.Durability[mod] {
 		return
 	}
@@ -230,6 +244,9 @@ func (r *Reactable) attachBurning() {
 }
 
 func (r *Reactable) addDurability(mod info.ReactionModKey, amt info.Durability) {
+	if !r.Mutable[mod] {
+		return
+	}
 	r.Durability[mod] += amt
 	r.core.Events.Emit(event.OnAuraDurabilityAdded, r.self, mod, amt)
 }
@@ -282,7 +299,9 @@ func (r *Reactable) reduce(e attributes.Element, dur, factor info.Durability) in
 			// reset decay rate to 0
 		}
 
-		r.Durability[i] -= red
+		if r.Mutable[i] {
+			r.Durability[i] -= red
+		}
 
 		if red > reduced {
 			reduced = red
@@ -315,7 +334,7 @@ func (r *Reactable) Tick() {
 		if r.DecayRate[i] == 0 {
 			continue
 		}
-		if r.Durability[i] > info.ZeroDur {
+		if r.Durability[i] > info.ZeroDur && r.Mutable[i] {
 			r.Durability[i] -= r.DecayRate[i]
 			r.deplete(i)
 		}

@@ -53,6 +53,7 @@ type Reactable interface {
 	AuraCount() int
 	GetDurability() []Durability
 	AuraContains(e ...attributes.Element) bool
+	SetMutable(mod ReactionModKey, value bool)
 
 	ReactableBloom
 	ReactableBurning
