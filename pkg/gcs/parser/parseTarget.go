@@ -162,6 +162,17 @@ func parseTarget(p *Parser) (parseFn, error) {
 				r.Element = ele
 			}
 			r.Modified = true
+		case ast.KeywordElementDurability:
+			item, err := p.acceptSeqReturnLast(ast.ItemAssign, ast.ItemNumber)
+			if err != nil {
+				return nil, err
+			}
+			dur, err := itemNumberToFloat64(item)
+			if err != nil {
+				return nil, err
+			}
+			r.ElementDurability = info.Durability(dur)
+			r.Modified = true
 		case ast.ItemTerminateLine:
 			p.res.Targets = append(p.res.Targets, r)
 			return parseRows, nil

@@ -2,6 +2,7 @@ package info
 
 import (
 	"github.com/genshinsim/gcsim/pkg/core/attributes"
+	//"github.com/genshinsim/gcsim/pkg/core/info"
 	"github.com/genshinsim/gcsim/pkg/model"
 )
 
@@ -20,6 +21,7 @@ type EnemyProfile struct {
 	Id                    int                    `json:"-"`
 	MonsterName           string                 `json:"monster_name"`
 	Element               attributes.Element     `json:"element"`
+	ElementDurability     Durability             `json:"element_durability"`
 	Modified              bool                   `json:"modified"`
 }
 
