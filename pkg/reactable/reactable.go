@@ -35,6 +35,9 @@ type Reactable struct {
 	swirlCryoGCD    int
 	swirlPyroGCD    int
 	crystallizeGCD  int
+	// contributors for lunarcharged
+	// map of char name to expiry frame
+	contributors map[int]info.AttackInfo
 }
 
 type Enemy interface {
@@ -60,6 +63,7 @@ func (r *Reactable) Init(self info.Target, c *core.Core) *Reactable {
 	r.swirlCryoGCD = -1
 	r.swirlPyroGCD = -1
 	r.crystallizeGCD = -1
+	r.contributors = make(map[int]info.AttackInfo)
 	return r
 }
 
@@ -84,13 +88,14 @@ func (r *Reactable) AuraCount() int {
 }
 
 func (r *Reactable) React(a *info.AttackEvent) {
+	r.AddLCContributor(a)
 	// TODO: double check order of reactions
 	switch a.Info.Element {
 	case attributes.Electro:
 		// hyperbloom
 		r.TryAggravate(a)
 		r.TryOverload(a)
-		r.TryAddEC(a)
+		r.TryAddLC(a)
 		r.TryFrozenSuperconduct(a)
 		r.TrySuperconduct(a)
 		r.TryQuicken(a)
@@ -108,7 +113,7 @@ func (r *Reactable) React(a *info.AttackEvent) {
 		r.TryVaporize(a)
 		r.TryFreeze(a)
 		r.TryBloom(a)
-		r.TryAddEC(a)
+		r.TryAddLC(a)
 	case attributes.Anemo:
 		r.TrySwirlElectro(a)
 		r.TrySwirlPyro(a)
@@ -136,6 +141,7 @@ func (r *Reactable) React(a *info.AttackEvent) {
 // and will either create a new modifier if non exist, or update according to the rules of
 // each modifier
 func (r *Reactable) AttachOrRefill(a *info.AttackEvent) bool {
+	r.AddLCContributor(a)
 	if a.Info.Durability < info.ZeroDur {
 		return false
 	}

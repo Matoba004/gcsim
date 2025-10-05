@@ -21,6 +21,7 @@ const (
 	ReactionTypeSwirlPyro          ReactionType = "swirl-pyro"
 	ReactionTypeSwirlCryo          ReactionType = "swirl-cryo"
 	ReactionTypeElectroCharged     ReactionType = "electrocharged"
+	ReactionTypeLunarCharged       ReactionType = "lunarcharged"
 	ReactionTypeShatter            ReactionType = "shatter"
 	ReactionTypeBurning            ReactionType = "burning"
 	ReactionTypeQuicken            ReactionType = "quicken"

@@ -30,6 +30,7 @@ const (
 	ICDTagOverloadDamage
 	ICDTagSuperconductDamage
 	ICDTagECDamage
+	ICDTagLCDamage
 	ICDTagShatter
 	ICDTagSwirlPyro
 	ICDTagSwirlHydro

@@ -17,6 +17,7 @@ const (
 	AttackTagOverloadDamage
 	AttackTagSuperconductDamage
 	AttackTagECDamage
+	AttackTagLCDamage
 	AttackTagShatter
 	AttackTagSwirlPyro
 	AttackTagSwirlHydro
