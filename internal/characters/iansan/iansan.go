@@ -31,9 +31,11 @@ type char struct {
 
 	c1Points float64
 	c4Stacks int
+
+	nightsoulDecrease float64
 }
 
-func NewChar(s *core.Core, w *character.CharWrapper, _ info.CharacterProfile) error {
+func NewChar(s *core.Core, w *character.CharWrapper, p info.CharacterProfile) error {
 	c := char{}
 	c.Character = tmpl.NewWithWrapper(s, w)
 
@@ -44,6 +46,16 @@ func NewChar(s *core.Core, w *character.CharWrapper, _ info.CharacterProfile) er
 
 	c.nightsoulState = nightsoul.New(s, w)
 	c.nightsoulState.MaxPoints = 54
+
+	nb, ok := p.Params["nightsoul_bleed"]
+
+	nightsoulDecrease := float64(nb) / 100.0 * maxNightsoulDecrease
+
+	if !ok {
+		nightsoulDecrease = maxNightsoulDecrease
+	}
+	nightsoulDecrease = max(min(nightsoulDecrease, maxNightsoulDecrease), 0)
+	c.nightsoulDecrease = float64(nightsoulDecrease)
 
 	w.Character = &c
 

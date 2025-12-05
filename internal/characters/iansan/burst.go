@@ -27,6 +27,8 @@ const (
 
 	burstStatus     = "kinetic-energy"
 	burstBuffStatus = "iansan-burst-buff"
+
+	maxNightsoulDecrease = 0.6
 )
 
 func (c *char) Burst(p map[string]int) (action.Info, error) {

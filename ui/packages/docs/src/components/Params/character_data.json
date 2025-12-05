@@ -646,6 +646,13 @@
       "desc": "0 for no collision dmg (default), 1 for collision dmg."
     }
   ],
+  "iansan": [
+    {
+      "ability": "-",
+      "param": "nightsoul_bleed",
+      "desc": "Speed at which nightsoul will be decreased. Default is 0.6 (max speed)."
+    }
+  ],
   "itto": [
     {
       "ability": "skill",

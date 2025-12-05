@@ -100,8 +100,11 @@ func (c *char) nightsoulPointReduceTask(src int) {
 		}
 
 		points := 0.6
+
 		c.nightsoulState.ConsumePoints(points)
 		c.c1(points)
+
+		c.nightsoulState.GeneratePoints(points - c.nightsoulDecrease)
 		c.updateATKBuff()
 		if c.nightsoulState.Points() < 0.001 {
 			c.exitNightsoul()
