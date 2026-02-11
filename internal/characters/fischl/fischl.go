@@ -58,6 +58,7 @@ func NewChar(s *core.Core, w *character.CharWrapper, p info.CharacterProfile) er
 
 func (c *char) Init() error {
 	c.a4()
+	c.witchesEveRite()
 
 	if c.Base.Cons >= 6 {
 		w, err := minazuki.New(
