@@ -21,7 +21,6 @@ type char struct {
 	a1Buff              []float64
 	a4Buff              []float64
 	c4Count             int
-	c6buff              []float64
 }
 
 func NewChar(s *core.Core, w *character.CharWrapper, p info.CharacterProfile) error {
@@ -49,8 +48,5 @@ func NewChar(s *core.Core, w *character.CharWrapper, p info.CharacterProfile) er
 
 func (c *char) Init() error {
 	c.a1()
-	if c.Base.Cons >= 6 {
-		c.c6buff = make([]float64, attributes.EndStatType)
-	}
 	return nil
 }

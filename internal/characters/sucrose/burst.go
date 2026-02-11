@@ -7,9 +7,13 @@ import (
 	"github.com/genshinsim/gcsim/pkg/core/attributes"
 	"github.com/genshinsim/gcsim/pkg/core/combat"
 	"github.com/genshinsim/gcsim/pkg/core/info"
+	"github.com/genshinsim/gcsim/pkg/core/player/character"
+	"github.com/genshinsim/gcsim/pkg/modifier"
 )
 
 var burstFrames []int
+
+const burstHexBuffKey = "sucrose-hex-burst"
 
 func init() {
 	burstFrames = frames.InitAbilSlice(65) // walk
@@ -90,6 +94,7 @@ func (c *char) Burst(p map[string]int) (action.Info, error) {
 
 	c.SetCDWithDelay(action.ActionBurst, 1200, 18)
 	c.ConsumeEnergy(21)
+	c.witchesEveRiteBurst()
 
 	return action.Info{
 		Frames:          frames.NewAbilFunc(burstFrames),
@@ -114,5 +119,38 @@ func (c *char) absorbCheck(src, count, maxcount int) func() {
 		}
 		// otherwise queue up
 		c.Core.Tasks.Add(c.absorbCheck(src, count+1, maxcount), 18)
+	}
+}
+
+func (c *char) witchesEveRiteBurst() {
+	if c.Hexerei != 1 {
+		return
+	}
+
+	if c.Core.Player.GetHexereiCount() < 2 {
+		return
+	}
+
+	m := make([]float64, attributes.EndStatType)
+	m[attributes.DmgP] = 0.5 / 7
+
+	for _, char := range c.Core.Player.Chars() {
+		char.AddAttackMod(character.AttackMod{
+			Base: modifier.NewBaseWithHitlag(burstHexBuffKey, 60*10),
+			Amount: func(atk *info.AttackEvent, t info.Target) []float64 {
+				switch atk.Info.AttackTag {
+				case attacks.AttackTagNormal:
+				case attacks.AttackTagExtra:
+				case attacks.AttackTagPlunge:
+				case attacks.AttackTagElementalArt:
+				case attacks.AttackTagElementalArtHold:
+				case attacks.AttackTagElementalBurst:
+				default:
+					return nil
+				}
+
+				return m
+			},
+		})
 	}
 }

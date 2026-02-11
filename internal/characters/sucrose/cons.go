@@ -44,14 +44,19 @@ func (c *char) makeC4Callback() func(info.AttackCB) {
 
 func (c *char) c6() {
 	stat := attributes.EleToDmgP(c.qAbsorb)
-	c.c6buff[stat] = .20
-
 	for _, char := range c.Core.Player.Chars() {
+		m := make([]float64, attributes.EndStatType)
+		if c.Hexerei == 1 && char.Hexerei == 1 {
+			m[stat] = .20 + .6/7
+		} else {
+			m[stat] = .20
+		}
+
 		char.AddStatMod(character.StatMod{
 			Base:         modifier.NewBaseWithHitlag("sucrose-c6", 60*10),
 			AffectedStat: stat,
 			Amount: func() []float64 {
-				return c.c6buff
+				return m
 			},
 		})
 	}

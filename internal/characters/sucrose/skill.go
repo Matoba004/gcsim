@@ -7,11 +7,15 @@ import (
 	"github.com/genshinsim/gcsim/pkg/core/attributes"
 	"github.com/genshinsim/gcsim/pkg/core/combat"
 	"github.com/genshinsim/gcsim/pkg/core/info"
+	"github.com/genshinsim/gcsim/pkg/core/player/character"
+	"github.com/genshinsim/gcsim/pkg/modifier"
 )
 
 var skillFrames []int
 
 const particleICDKey = "sucrose-particle-icd"
+
+const skillHexBuffKey = "sucrose-hex-skill"
 
 func init() {
 	skillFrames = frames.InitAbilSlice(68) // walk
@@ -60,6 +64,7 @@ func (c *char) Skill(p map[string]int) (action.Info, error) {
 
 	// reduce charge by 1
 	c.SetCDWithDelay(action.ActionSkill, 900, 9)
+	c.witchesEveRiteSkill()
 
 	return action.Info{
 		Frames:          frames.NewAbilFunc(skillFrames),
@@ -78,4 +83,37 @@ func (c *char) particleCB(a info.AttackCB) {
 	}
 	c.AddStatus(particleICDKey, 0.4*60, false)
 	c.Core.QueueParticle(c.Base.Key.String(), 4, attributes.Anemo, c.ParticleDelay)
+}
+
+func (c *char) witchesEveRiteSkill() {
+	if c.Hexerei != 1 {
+		return
+	}
+
+	if c.Core.Player.GetHexereiCount() < 2 {
+		return
+	}
+
+	m := make([]float64, attributes.EndStatType)
+	m[attributes.DmgP] = 0.4 / 7
+
+	for _, char := range c.Core.Player.Chars() {
+		char.AddAttackMod(character.AttackMod{
+			Base: modifier.NewBaseWithHitlag(skillHexBuffKey, 60*10),
+			Amount: func(atk *info.AttackEvent, t info.Target) []float64 {
+				switch atk.Info.AttackTag {
+				case attacks.AttackTagNormal:
+				case attacks.AttackTagExtra:
+				case attacks.AttackTagPlunge:
+				case attacks.AttackTagElementalArt:
+				case attacks.AttackTagElementalArtHold:
+				case attacks.AttackTagElementalBurst:
+				default:
+					return nil
+				}
+
+				return m
+			},
+		})
+	}
 }
