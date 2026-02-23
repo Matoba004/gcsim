@@ -202,7 +202,6 @@ var WeaponNameToKey = map[string]keys.Weapon{
 	"mouuns":                          keys.MouunsMoon,
 	"nocturnescourtaincall":           keys.NocturnesCourtainCall,
 	"nocturnes":                       keys.NocturnesCourtainCall,
-	"ncc":                             keys.NocturnesCourtainCall,
 	"oathsworneye":                    keys.OathswornEye,
 	"oathsworn":                       keys.OathswornEye,
 	"oldmercspal":                     keys.OldMercsPal,
