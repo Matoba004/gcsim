@@ -16,9 +16,10 @@ import (
 )
 
 const (
-	c2icdkey = "mona-c2-icd"
-	c4key    = "mona-c4"
-	c6Key    = "mona-c6"
+	c2icdkey        = "mona-c2-icd"
+	c2HexereiICDKey = "mona-c2-hexerei-icd"
+	c4key           = "mona-c4"
+	c6Key           = "mona-c6"
 )
 
 // C1:
@@ -49,8 +50,14 @@ func (c *char) c1() {
 					Base: modifier.NewBase("mona-c1", 8*60),
 					Amount: func(ai info.AttackInfo) float64 {
 						// doesn't work off-field
+						m := 0.15
+
 						if c.Core.Player.Active() != char.Index() {
-							return 0
+							if c.IsHexerei {
+								m = 0.4
+							} else {
+								return 0
+							}
 						}
 
 						switch ai.AttackTag {
@@ -58,13 +65,13 @@ func (c *char) c1() {
 						// Electro-Charged DMG increases by 15%.
 						// Lunar-Charged DMG increases by 15%.
 						case attacks.AttackTagSwirlHydro, attacks.AttackTagECDamage, attacks.AttackTagReactionLunarCharge, attacks.AttackTagDirectLunarCharged:
-							return 0.15
+							return m
 						}
 
 						// Vaporize DMG increases by 15%.
 						// the only way Hydro Swirl can vape is via an AoE Hydro Swirl which doesn't do damage anyways, so this is fine
 						if ai.Amped {
-							return 0.15
+							return m
 						}
 
 						return 0
@@ -95,13 +102,13 @@ func (c *char) c2() {
 		if atk.Info.AttackTag != attacks.AttackTagNormal {
 			return
 		}
-
-		if c.Core.Rand.Float64() > .2 {
+		if c.Core.Rand.Float64() > .2 && !c.StatusIsActive(c2HexereiICDKey) {
 			return
 		}
 		if c.StatusIsActive(c2icdkey) {
 			return
 		}
+		c.DeleteStatus(c2HexereiICDKey)
 		c.AddStatus(c2icdkey, 5*60, true)
 
 		c.QueueCharTask(func() {
@@ -119,6 +126,31 @@ func (c *char) c2() {
 			c.Core.QueueAttack(ai, combat.NewCircleHitOnTarget(trg, nil, 3), 0, 0)
 		}, .7*60)
 	}, "mona-c2-followup")
+
+	if c.IsHexerei {
+		c.Core.Events.Subscribe(event.OnEnemyDamage, func(args ...any) {
+			atk := args[1].(*info.AttackEvent)
+			if atk.Info.ActorIndex != c.Index() {
+				return
+			}
+			if atk.Info.AttackTag != attacks.AttackTagExtra {
+				return
+			}
+
+			m := make([]float64, attributes.EndStatType)
+			m[attributes.EM] = 80
+
+			for _, char := range c.Core.Player.Chars() {
+				char.AddStatMod(character.StatMod{
+					Base:         modifier.NewBase("mona-hexerei-c2-em", 60*8),
+					AffectedStat: attributes.EM,
+					Amount: func() []float64 {
+						return m
+					},
+				})
+			}
+		}, "mona-hexerei-c2-em")
+	}
 }
 
 // C4:
@@ -134,6 +166,10 @@ func (c *char) c4() {
 				x, ok := t.(*enemy.Enemy)
 				if !ok {
 					return nil
+				}
+
+				if c.IsHexerei && char.IsHexerei {
+					m[attributes.CD] = 0.15
 				}
 				// ok only if either bubble or omen is present
 				if x.StatusIsActive(bubbleKey) || x.StatusIsActive(omenKey) {
@@ -187,7 +223,7 @@ func (c *char) c6(src int) func() {
 			return
 		}
 		// do nothing if we aren't dashing anymore
-		if c.Core.Player.CurrentState() != action.DashState {
+		if c.Core.Player.CurrentState() != action.DashState && !(c.IsHexerei && (c.StatusIsActive(omenKey) || c.StatusIsActive(bubbleKey))) {
 			return
 		}
 
@@ -215,6 +251,32 @@ func (c *char) c6(src int) func() {
 		// queue up another stack and buff refresh in 1s
 		c.Core.Tasks.Add(c.c6(src), 60)
 	}
+}
+
+func (c *char) c6ChargeAttackInit() {
+	if !c.IsHexerei {
+		return
+	}
+
+	c6HexCABuff := func(args ...any) {
+		atk, ok := args[1].(*info.AttackEvent)
+		t, ok := args[0].(*enemy.Enemy)
+		if !ok {
+			return
+		}
+		if atk.Info.ActorIndex != c.Index() {
+			return
+		}
+		if atk.Info.AttackTag != attacks.AttackTagExtra {
+			return
+		}
+		if !t.StatusIsActive(omenKey) && !t.StatusIsActive(bubbleKey) {
+			return
+		}
+		atk.Info.Mult *= 2
+	}
+
+	c.Core.Events.Subscribe(event.OnEnemyHit, c6HexCABuff, "mona-hexerei-c6-ca-buff-%v")
 }
 
 func (c *char) makeC6CAResetCB() info.AttackCBFunc {
