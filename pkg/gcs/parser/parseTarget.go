@@ -15,6 +15,7 @@ func parseTarget(p *Parser) (parseFn, error) {
 	var r info.EnemyProfile
 	r.Resist = make(map[attributes.Element]float64)
 	r.ParticleElement = attributes.NoElement
+	r.Element = attributes.NoElement
 	for n := p.next(); n.Typ != ast.ItemEOF; n = p.next() {
 		switch n.Typ {
 		case ast.ItemIdentifier:
@@ -152,6 +153,26 @@ func parseTarget(p *Parser) (parseFn, error) {
 			}
 
 			r.Resist[ast.EleKeys[s]] += amt
+			r.Modified = true
+		case ast.KeywordElement:
+			item, err := p.acceptSeqReturnLast(ast.ItemAssign, ast.ItemElementKey)
+			if err != nil {
+				return nil, err
+			}
+			if ele, ok := ast.EleKeys[item.Val]; ok {
+				r.Element = ele
+			}
+			r.Modified = true
+		case ast.KeywordElementDurability:
+			item, err := p.acceptSeqReturnLast(ast.ItemAssign, ast.ItemElementKey)
+			if err != nil {
+				return nil, err
+			}
+			dur, err := itemNumberToFloat64(item)
+			if err != nil {
+				return nil, err
+			}
+			r.ElementDurability = info.Durability(dur)
 			r.Modified = true
 		case ast.ItemTerminateLine:
 			p.res.Targets = append(p.res.Targets, r)

@@ -127,8 +127,12 @@ func (r *Reactable) TryAddEC(a *info.AttackEvent) bool {
 }
 
 func (r *Reactable) waneEC() {
-	r.reduceMod(info.ReactionModKeyElectro, 10)
-	r.reduceMod(info.ReactionModKeyHydro, 10)
+	if r.Mutable[info.ReactionModKeyElectro] {
+		r.reduceMod(info.ReactionModKeyElectro, 10)
+	}
+	if r.Mutable[info.ReactionModKeyHydro] {
+		r.reduceMod(info.ReactionModKeyHydro, 10)
+	}
 	r.core.Log.NewEvent("ec wane",
 		glog.LogElementEvent,
 		-1,

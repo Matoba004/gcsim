@@ -14,6 +14,7 @@ import (
 type Reactable struct {
 	Durability [info.ReactionModKeyEnd][info.MaxChars]info.Durability
 	DecayRate  [info.ReactionModKeyEnd]info.Durability
+	Mutable    [info.ReactionModKeyEnd]bool
 	// Source     []int //source frame of the aura
 	self info.Target
 	core *core.Core
@@ -49,6 +50,10 @@ const (
 )
 
 func (r *Reactable) Init(self info.Target, c *core.Core) *Reactable {
+	for i := info.ReactionModKeyInvalid; i < info.ReactionModKeyEnd; i++ {
+		r.Mutable[i] = true
+	}
+
 	r.self = self
 	r.core = c
 	// TODO: change this to be initialized after the characters are added
@@ -195,6 +200,10 @@ func (r *Reactable) SetAuraDecayRate(mod info.ReactionModKey, decay info.Durabil
 	r.DecayRate[mod] = decay
 }
 
+func (r *Reactable) SetMutable(mod info.ReactionModKey, mutable bool) {
+	r.Mutable[mod] = mutable
+}
+
 func (r *Reactable) SetFreezeResist(fr float64) {
 	r.FreezeResist = fr
 }
@@ -211,6 +220,9 @@ func (r *Reactable) attachOrRefillNormalEle(mod info.ReactionModKey, dur info.Du
 }
 
 func (r *Reactable) attachOverlap(mod info.ReactionModKey, amt, length info.Durability, src int) {
+	if !r.Mutable[mod] {
+		return
+	}
 	if r.GetAuraDurability(mod) > info.ZeroDur {
 		add := max(amt-r.Durability[mod][src], 0)
 		if add > 0 {
@@ -225,6 +237,9 @@ func (r *Reactable) attachOverlap(mod info.ReactionModKey, amt, length info.Dura
 }
 
 func (r *Reactable) attachOverlapRefreshDuration(mod info.ReactionModKey, amt, length info.Durability, src int) {
+	if !r.Mutable[mod] {
+		return
+	}
 	if amt < r.GetAuraDurability(mod) {
 		return
 	}
@@ -243,6 +258,9 @@ func (r *Reactable) attachBurning(src int) {
 }
 
 func (r *Reactable) addDurability(mod info.ReactionModKey, amt info.Durability, src int) {
+	if !r.Mutable[mod] {
+		return
+	}
 	r.Durability[mod][src] += amt
 	r.core.Events.Emit(event.OnAuraDurabilityAdded, r.self, mod, amt)
 }
@@ -303,7 +321,9 @@ func (r *Reactable) reduce(e attributes.Element, dur, factor info.Durability) in
 
 		red := min(m, r.GetAuraDurability(i))
 
-		r.reduceMod(i, red)
+		if r.Mutable[i] {
+			r.reduceMod(i, red)
+		}
 
 		if red > reduced {
 			reduced = red
@@ -314,7 +334,7 @@ func (r *Reactable) reduce(e attributes.Element, dur, factor info.Durability) in
 }
 
 func (r *Reactable) deplete(m info.ReactionModKey) {
-	if r.GetAuraDurability(m) <= info.ZeroDur {
+	if r.GetAuraDurability(m) <= info.ZeroDur && r.Mutable[m] {
 		r.SetAuraDecayRate(m, 0)
 		r.core.Events.Emit(event.OnAuraDurabilityDepleted, r.self, attributes.Element(m))
 	}
@@ -357,6 +377,9 @@ func (r *Reactable) Tick() {
 	// otherwise it uses it's own
 	for i := info.ReactionModKeyDendro; i <= info.ReactionModKeyQuicken; i++ {
 		if r.GetAuraDurability(i) < info.ZeroDur {
+			continue
+		}
+		if !r.Mutable[i] {
 			continue
 		}
 		rate := r.DecayRate[i]

@@ -109,6 +109,8 @@ const (
 	KeywordParticleDropCount // particle_drop_count
 	KeywordParticleElement   // particle_element
 	KeywordHurt              // hurt
+	KeywordElement           // element
+	KeywordElementDurability // element_durability
 
 	// Keywords specific to gcsim appears after this
 	ItemKeys

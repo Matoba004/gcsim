@@ -19,6 +19,8 @@ type EnemyProfile struct {
 	HpGrowCurve           model.MonsterCurveType `json:"-"`
 	Id                    int                    `json:"-"`
 	MonsterName           string                 `json:"monster_name"`
+	Element               attributes.Element     `json:"element"`
+	ElementDurability     Durability             `json:"element_durability"`
 	Modified              bool                   `json:"modified"`
 }
 

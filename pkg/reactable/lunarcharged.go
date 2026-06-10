@@ -186,8 +186,12 @@ func (r *Reactable) reduceLCAuraCB(a info.AttackCB) {
 		existing = r.ActiveAuraString()
 	}
 
-	r.reduceMod(info.ReactionModKeyElectro, 10)
-	r.reduceMod(info.ReactionModKeyHydro, 10)
+	if r.Mutable[info.ReactionModKeyElectro] {
+		r.reduceMod(info.ReactionModKeyElectro, 10)
+	}
+	if r.Mutable[info.ReactionModKeyHydro] {
+		r.reduceMod(info.ReactionModKeyHydro, 10)
+	}
 
 	if r.core.Flags.LogDebug {
 		r.core.Log.NewEvent(
