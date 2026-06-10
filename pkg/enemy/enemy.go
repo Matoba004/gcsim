@@ -68,7 +68,7 @@ func New(core *core.Core, p info.EnemyProfile) *Enemy {
 		case attributes.Dendro:
 			mod = info.ReactionModKeyDendro
 		}
-		e.Reactable.SetMutable(mod, false)
+		e.SetMutable(mod, false)
 	}
 	return e
 }
@@ -124,16 +124,16 @@ func (e *Enemy) ApplySelfInfusion(ele attributes.Element, dur info.Durability, f
 	}
 
 	// we're assuming refill maintains the same decay rate?
-	if e.Reactable.GetAuraDurability(mod) > info.ZeroDur {
+	if e.GetAuraDurability(mod) > info.ZeroDur {
 		// make sure we're not adding more than incoming
-		if e.Reactable.GetAuraDurability(mod) < dur {
-			e.Reactable.SetAuraDurability(mod, dur, 0)
+		if e.GetAuraDurability(mod) < dur {
+			e.SetAuraDurability(mod, dur, 0)
 		}
 		return
 	}
 	// otherwise calculate decay based on specified f (in frames)
-	e.Reactable.SetAuraDurability(mod, dur, 0)
+	e.SetAuraDurability(mod, dur, 0)
 	if f > 0 {
-		e.Reactable.SetAuraDecayRate(mod, dur/info.Durability(f))
+		e.SetAuraDecayRate(mod, dur/info.Durability(f))
 	}
 }
