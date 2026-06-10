@@ -164,7 +164,7 @@ func parseTarget(p *Parser) (parseFn, error) {
 			}
 			r.Modified = true
 		case ast.KeywordElementDurability:
-			item, err := p.acceptSeqReturnLast(ast.ItemAssign, ast.ItemElementKey)
+			item, err := p.acceptSeqReturnLast(ast.ItemAssign, ast.ItemNumber)
 			if err != nil {
 				return nil, err
 			}

@@ -127,12 +127,12 @@ func (e *Enemy) ApplySelfInfusion(ele attributes.Element, dur info.Durability, f
 	if e.Reactable.GetAuraDurability(mod) > info.ZeroDur {
 		// make sure we're not adding more than incoming
 		if e.Reactable.GetAuraDurability(mod) < dur {
-			e.Reactable.SetAuraDurability(mod, dur, -1)
+			e.Reactable.SetAuraDurability(mod, dur, 0)
 		}
 		return
 	}
 	// otherwise calculate decay based on specified f (in frames)
-	e.Reactable.SetAuraDurability(mod, dur, -1)
+	e.Reactable.SetAuraDurability(mod, dur, 0)
 	if f > 0 {
 		e.Reactable.SetAuraDecayRate(mod, dur/info.Durability(f))
 	}
