@@ -74,6 +74,7 @@ const (
 	FesteringDesire                               // festeringdesire
 	FilletBlade                                   // filletblade
 	FinaleOfTheDeep                               // finaleofthedeep
+	FlameForgedInsight                            // flameforgedinsight
 	FleuveCendreFerryman                          // fleuvecendreferryman
 	FlowerWreathedFeathers                        // flowerwreathedfeathers
 	FlowingPurity                                 // flowingpurity

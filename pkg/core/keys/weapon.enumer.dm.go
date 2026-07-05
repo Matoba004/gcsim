@@ -8,11 +8,11 @@ import (
 	"strings"
 )
 
-const _WeaponName = "absolutionakuoumarualleyhunteramenomakageuchiamosbowangelosheptadesapprenticesnotesaquasimulacraaquilafavoniaashgravendrinkinghornastralvulturescrimsonplumageathameartisathousandblazingsunsathousandfloatingdreamsazurelightballadoftheboundlessblueballadofthefjordsbeaconofthereedseabeginnersprotectorblackcliffagateblackclifflongswordblackcliffpoleblackcliffslasherblackcliffwarbowblackmarrowlanternblacktasselbloodsoakedruinsbloodtaintedgreatswordcalamityofeshucalamityquellercashflowsupervisionchainbreakercinnabarspindlecloudforgedcompoundbowcoolsteelcranesechoingcallcrescentpikecrimsonmoonssemblancedarkironsworddawningfrostdeathmatchdebateclubdialoguesofthedesertsagesdodocotalesdragonsbanedragonspinespeardullbladeearthshakerelegyfortheendemeraldorbendofthelineengulfinglightningetherlightspindleluteeverlastingmoongloweyeofperceptionfadingtwilightfangofthemountainkingfavoniuscodexfavoniusgreatswordfavoniuslancefavoniusswordfavoniuswarbowferrousshadowfesteringdesirefilletbladefinaleofthedeepfleuvecendreferrymanflowerwreathedfeathersflowingpurityfluteofezpitzalfootprintoftherainbowforestregaliafracturedhalofreedomswornfrostbearerfruitfulhookfruitoffulfillmentgestofthemightywolfhakushinringhalberdhamayumiharangeppakufutsuharbingerofdawnhuntersbowhunterspathibispiercerironpointironstingjadefallssplendorkagotsurubeisshinkagurasveritykatsuragikirinagamasakeyofkhajnisutkingssquirekitaincrossspearlightoffoliarincisionlionsroarlithicbladelithicspearlostprayertothesacredwindslumidouceelegyluxurioussealordmagicguidemailedflowermakhairaaquamarinemappamaremasterkeymemoryofdustmessengermissivewindspearmistsplitterreforgedmitternachtswaltzmoonpiercermoonweaversdawnmountainbracingboltmouunsmoonnightweaverslookingglassnocturnescurtaincalloathsworneyeoldmercspalotherworldlystorypeakpatrolsongpocketgrimoirepolarstarportablepowersawpredatorprimordialjadecutterprimordialjadewingedspearprospectorsdrillprospectorsshovelprototypeamberprototypearchaicprototypecrescentprototyperancourprototypestarglitterrainbowserpentsrainbowrainslasherrangegaugeravenbowrecurvebowredhornstonethresherreliquaryoftruthrightfulrewardringofyaxcheroyalbowroyalgreatswordroyalgrimoireroyallongswordroyalspearrustsacrificersstaffsacrificialbowsacrificialfragmentssacrificialgreatswordsacrificialjadesacrificialswordsapwoodbladescionoftheblazingsunseasonedhuntersbowsequenceofsolitudeserenityscallserpentspinesharpshootersoathsilvershowerheartstringssilverswordskyridergreatswordskyriderswordskywardatlasskywardbladeskywardharpskywardprideskywardspineslingshotsnarehooksnowtombedstarsilversolarpearlsongofbrokenpinessongofstillnesssplendoroftranquilwatersstaffofhomastaffofthescarletsandsstarcallerswatchsturdybonesummitshapersunnymorningsleepinsurfsupswordofdescensionswordofnarzissenkreuzsymphonistofscentstalkingsticktamayurateinoohanashithealleyflashthebelltheblackswordthecatchthedockhandsassistantthefirstgreatmagictheflutethestringlesstheunforgedtheviridescenthuntthewidsiththrillingtalesofdragonslayersthunderingpulsetidalshadowtomeoftheeternalflowtoukaboushiguretravelershandyswordtulaytullahsremembrancetwinnephriteultimateoverlordsmegamagicswordurakumisugiriverdictvividnotionsvortexvanquisherwanderingevenstarwastergreatswordwavebreakersfinwaveridingwhirlwhiteblindwhiteirongreatswordwhitetasselwindblumeodewineandsongwolffangwolfsgravestonexiphosmoonlightinvalidweapon"
+const _WeaponName = "absolutionakuoumarualleyhunteramenomakageuchiamosbowangelosheptadesapprenticesnotesaquasimulacraaquilafavoniaashgravendrinkinghornastralvulturescrimsonplumageathameartisathousandblazingsunsathousandfloatingdreamsazurelightballadoftheboundlessblueballadofthefjordsbeaconofthereedseabeginnersprotectorblackcliffagateblackclifflongswordblackcliffpoleblackcliffslasherblackcliffwarbowblackmarrowlanternblacktasselbloodsoakedruinsbloodtaintedgreatswordcalamityofeshucalamityquellercashflowsupervisionchainbreakercinnabarspindlecloudforgedcompoundbowcoolsteelcranesechoingcallcrescentpikecrimsonmoonssemblancedarkironsworddawningfrostdeathmatchdebateclubdialoguesofthedesertsagesdodocotalesdragonsbanedragonspinespeardullbladeearthshakerelegyfortheendemeraldorbendofthelineengulfinglightningetherlightspindleluteeverlastingmoongloweyeofperceptionfadingtwilightfangofthemountainkingfavoniuscodexfavoniusgreatswordfavoniuslancefavoniusswordfavoniuswarbowferrousshadowfesteringdesirefilletbladefinaleofthedeepflameforgedinsightfleuvecendreferrymanflowerwreathedfeathersflowingpurityfluteofezpitzalfootprintoftherainbowforestregaliafracturedhalofreedomswornfrostbearerfruitfulhookfruitoffulfillmentgestofthemightywolfhakushinringhalberdhamayumiharangeppakufutsuharbingerofdawnhuntersbowhunterspathibispiercerironpointironstingjadefallssplendorkagotsurubeisshinkagurasveritykatsuragikirinagamasakeyofkhajnisutkingssquirekitaincrossspearlightoffoliarincisionlionsroarlithicbladelithicspearlostprayertothesacredwindslumidouceelegyluxurioussealordmagicguidemailedflowermakhairaaquamarinemappamaremasterkeymemoryofdustmessengermissivewindspearmistsplitterreforgedmitternachtswaltzmoonpiercermoonweaversdawnmountainbracingboltmouunsmoonnightweaverslookingglassnocturnescurtaincalloathsworneyeoldmercspalotherworldlystorypeakpatrolsongpocketgrimoirepolarstarportablepowersawpredatorprimordialjadecutterprimordialjadewingedspearprospectorsdrillprospectorsshovelprototypeamberprototypearchaicprototypecrescentprototyperancourprototypestarglitterrainbowserpentsrainbowrainslasherrangegaugeravenbowrecurvebowredhornstonethresherreliquaryoftruthrightfulrewardringofyaxcheroyalbowroyalgreatswordroyalgrimoireroyallongswordroyalspearrustsacrificersstaffsacrificialbowsacrificialfragmentssacrificialgreatswordsacrificialjadesacrificialswordsapwoodbladescionoftheblazingsunseasonedhuntersbowsequenceofsolitudeserenityscallserpentspinesharpshootersoathsilvershowerheartstringssilverswordskyridergreatswordskyriderswordskywardatlasskywardbladeskywardharpskywardprideskywardspineslingshotsnarehooksnowtombedstarsilversolarpearlsongofbrokenpinessongofstillnesssplendoroftranquilwatersstaffofhomastaffofthescarletsandsstarcallerswatchsturdybonesummitshapersunnymorningsleepinsurfsupswordofdescensionswordofnarzissenkreuzsymphonistofscentstalkingsticktamayurateinoohanashithealleyflashthebelltheblackswordthecatchthedockhandsassistantthefirstgreatmagictheflutethestringlesstheunforgedtheviridescenthuntthewidsiththrillingtalesofdragonslayersthunderingpulsetidalshadowtomeoftheeternalflowtoukaboushiguretravelershandyswordtulaytullahsremembrancetwinnephriteultimateoverlordsmegamagicswordurakumisugiriverdictvividnotionsvortexvanquisherwanderingevenstarwastergreatswordwavebreakersfinwaveridingwhirlwhiteblindwhiteirongreatswordwhitetasselwindblumeodewineandsongwolffangwolfsgravestonexiphosmoonlightinvalidweapon"
 
-var _WeaponIndex = [...]uint16{0, 0, 10, 19, 30, 45, 52, 67, 83, 96, 109, 130, 158, 169, 189, 212, 222, 246, 263, 281, 299, 314, 333, 347, 364, 380, 398, 409, 425, 447, 461, 476, 495, 507, 522, 533, 544, 553, 570, 582, 603, 616, 628, 638, 648, 673, 684, 695, 711, 720, 731, 745, 755, 767, 785, 806, 825, 840, 854, 875, 888, 906, 919, 932, 946, 959, 974, 985, 1000, 1020, 1042, 1055, 1070, 1091, 1104, 1117, 1129, 1140, 1152, 1170, 1189, 1201, 1208, 1216, 1233, 1248, 1258, 1269, 1280, 1289, 1298, 1315, 1332, 1345, 1366, 1380, 1391, 1407, 1428, 1437, 1448, 1459, 1485, 1499, 1515, 1525, 1537, 1555, 1564, 1573, 1585, 1594, 1610, 1630, 1647, 1658, 1673, 1692, 1702, 1726, 1746, 1758, 1769, 1786, 1800, 1814, 1823, 1839, 1847, 1867, 1892, 1908, 1925, 1939, 1955, 1972, 1988, 2008, 2030, 2041, 2051, 2059, 2069, 2089, 2105, 2119, 2131, 2139, 2154, 2167, 2181, 2191, 2195, 2211, 2225, 2245, 2266, 2281, 2297, 2309, 2329, 2347, 2365, 2378, 2390, 2407, 2431, 2442, 2460, 2473, 2485, 2497, 2508, 2520, 2532, 2541, 2550, 2570, 2580, 2597, 2612, 2636, 2647, 2669, 2685, 2695, 2707, 2726, 2733, 2750, 2771, 2789, 2801, 2822, 2835, 2842, 2855, 2863, 2884, 2902, 2910, 2923, 2934, 2952, 2962, 2991, 3006, 3017, 3037, 3052, 3071, 3094, 3106, 3137, 3150, 3157, 3169, 3185, 3202, 3218, 3233, 3248, 3258, 3277, 3288, 3300, 3311, 3319, 3334, 3349, 3362}
+var _WeaponIndex = [...]uint16{0, 0, 10, 19, 30, 45, 52, 67, 83, 96, 109, 130, 158, 169, 189, 212, 222, 246, 263, 281, 299, 314, 333, 347, 364, 380, 398, 409, 425, 447, 461, 476, 495, 507, 522, 533, 544, 553, 570, 582, 603, 616, 628, 638, 648, 673, 684, 695, 711, 720, 731, 745, 755, 767, 785, 806, 825, 840, 854, 875, 888, 906, 919, 932, 946, 959, 974, 985, 1000, 1018, 1038, 1060, 1073, 1088, 1109, 1122, 1135, 1147, 1158, 1170, 1188, 1207, 1219, 1226, 1234, 1251, 1266, 1276, 1287, 1298, 1307, 1316, 1333, 1350, 1363, 1384, 1398, 1409, 1425, 1446, 1455, 1466, 1477, 1503, 1517, 1533, 1543, 1555, 1573, 1582, 1591, 1603, 1612, 1628, 1648, 1665, 1676, 1691, 1710, 1720, 1744, 1764, 1776, 1787, 1804, 1818, 1832, 1841, 1857, 1865, 1885, 1910, 1926, 1943, 1957, 1973, 1990, 2006, 2026, 2048, 2059, 2069, 2077, 2087, 2107, 2123, 2137, 2149, 2157, 2172, 2185, 2199, 2209, 2213, 2229, 2243, 2263, 2284, 2299, 2315, 2327, 2347, 2365, 2383, 2396, 2408, 2425, 2449, 2460, 2478, 2491, 2503, 2515, 2526, 2538, 2550, 2559, 2568, 2588, 2598, 2615, 2630, 2654, 2665, 2687, 2703, 2713, 2725, 2744, 2751, 2768, 2789, 2807, 2819, 2840, 2853, 2860, 2873, 2881, 2902, 2920, 2928, 2941, 2952, 2970, 2980, 3009, 3024, 3035, 3055, 3070, 3089, 3112, 3124, 3155, 3168, 3175, 3187, 3203, 3220, 3236, 3251, 3266, 3276, 3295, 3306, 3318, 3329, 3337, 3352, 3367, 3380}
 
-const _WeaponLowerName = "absolutionakuoumarualleyhunteramenomakageuchiamosbowangelosheptadesapprenticesnotesaquasimulacraaquilafavoniaashgravendrinkinghornastralvulturescrimsonplumageathameartisathousandblazingsunsathousandfloatingdreamsazurelightballadoftheboundlessblueballadofthefjordsbeaconofthereedseabeginnersprotectorblackcliffagateblackclifflongswordblackcliffpoleblackcliffslasherblackcliffwarbowblackmarrowlanternblacktasselbloodsoakedruinsbloodtaintedgreatswordcalamityofeshucalamityquellercashflowsupervisionchainbreakercinnabarspindlecloudforgedcompoundbowcoolsteelcranesechoingcallcrescentpikecrimsonmoonssemblancedarkironsworddawningfrostdeathmatchdebateclubdialoguesofthedesertsagesdodocotalesdragonsbanedragonspinespeardullbladeearthshakerelegyfortheendemeraldorbendofthelineengulfinglightningetherlightspindleluteeverlastingmoongloweyeofperceptionfadingtwilightfangofthemountainkingfavoniuscodexfavoniusgreatswordfavoniuslancefavoniusswordfavoniuswarbowferrousshadowfesteringdesirefilletbladefinaleofthedeepfleuvecendreferrymanflowerwreathedfeathersflowingpurityfluteofezpitzalfootprintoftherainbowforestregaliafracturedhalofreedomswornfrostbearerfruitfulhookfruitoffulfillmentgestofthemightywolfhakushinringhalberdhamayumiharangeppakufutsuharbingerofdawnhuntersbowhunterspathibispiercerironpointironstingjadefallssplendorkagotsurubeisshinkagurasveritykatsuragikirinagamasakeyofkhajnisutkingssquirekitaincrossspearlightoffoliarincisionlionsroarlithicbladelithicspearlostprayertothesacredwindslumidouceelegyluxurioussealordmagicguidemailedflowermakhairaaquamarinemappamaremasterkeymemoryofdustmessengermissivewindspearmistsplitterreforgedmitternachtswaltzmoonpiercermoonweaversdawnmountainbracingboltmouunsmoonnightweaverslookingglassnocturnescurtaincalloathsworneyeoldmercspalotherworldlystorypeakpatrolsongpocketgrimoirepolarstarportablepowersawpredatorprimordialjadecutterprimordialjadewingedspearprospectorsdrillprospectorsshovelprototypeamberprototypearchaicprototypecrescentprototyperancourprototypestarglitterrainbowserpentsrainbowrainslasherrangegaugeravenbowrecurvebowredhornstonethresherreliquaryoftruthrightfulrewardringofyaxcheroyalbowroyalgreatswordroyalgrimoireroyallongswordroyalspearrustsacrificersstaffsacrificialbowsacrificialfragmentssacrificialgreatswordsacrificialjadesacrificialswordsapwoodbladescionoftheblazingsunseasonedhuntersbowsequenceofsolitudeserenityscallserpentspinesharpshootersoathsilvershowerheartstringssilverswordskyridergreatswordskyriderswordskywardatlasskywardbladeskywardharpskywardprideskywardspineslingshotsnarehooksnowtombedstarsilversolarpearlsongofbrokenpinessongofstillnesssplendoroftranquilwatersstaffofhomastaffofthescarletsandsstarcallerswatchsturdybonesummitshapersunnymorningsleepinsurfsupswordofdescensionswordofnarzissenkreuzsymphonistofscentstalkingsticktamayurateinoohanashithealleyflashthebelltheblackswordthecatchthedockhandsassistantthefirstgreatmagictheflutethestringlesstheunforgedtheviridescenthuntthewidsiththrillingtalesofdragonslayersthunderingpulsetidalshadowtomeoftheeternalflowtoukaboushiguretravelershandyswordtulaytullahsremembrancetwinnephriteultimateoverlordsmegamagicswordurakumisugiriverdictvividnotionsvortexvanquisherwanderingevenstarwastergreatswordwavebreakersfinwaveridingwhirlwhiteblindwhiteirongreatswordwhitetasselwindblumeodewineandsongwolffangwolfsgravestonexiphosmoonlightinvalidweapon"
+const _WeaponLowerName = "absolutionakuoumarualleyhunteramenomakageuchiamosbowangelosheptadesapprenticesnotesaquasimulacraaquilafavoniaashgravendrinkinghornastralvulturescrimsonplumageathameartisathousandblazingsunsathousandfloatingdreamsazurelightballadoftheboundlessblueballadofthefjordsbeaconofthereedseabeginnersprotectorblackcliffagateblackclifflongswordblackcliffpoleblackcliffslasherblackcliffwarbowblackmarrowlanternblacktasselbloodsoakedruinsbloodtaintedgreatswordcalamityofeshucalamityquellercashflowsupervisionchainbreakercinnabarspindlecloudforgedcompoundbowcoolsteelcranesechoingcallcrescentpikecrimsonmoonssemblancedarkironsworddawningfrostdeathmatchdebateclubdialoguesofthedesertsagesdodocotalesdragonsbanedragonspinespeardullbladeearthshakerelegyfortheendemeraldorbendofthelineengulfinglightningetherlightspindleluteeverlastingmoongloweyeofperceptionfadingtwilightfangofthemountainkingfavoniuscodexfavoniusgreatswordfavoniuslancefavoniusswordfavoniuswarbowferrousshadowfesteringdesirefilletbladefinaleofthedeepflameforgedinsightfleuvecendreferrymanflowerwreathedfeathersflowingpurityfluteofezpitzalfootprintoftherainbowforestregaliafracturedhalofreedomswornfrostbearerfruitfulhookfruitoffulfillmentgestofthemightywolfhakushinringhalberdhamayumiharangeppakufutsuharbingerofdawnhuntersbowhunterspathibispiercerironpointironstingjadefallssplendorkagotsurubeisshinkagurasveritykatsuragikirinagamasakeyofkhajnisutkingssquirekitaincrossspearlightoffoliarincisionlionsroarlithicbladelithicspearlostprayertothesacredwindslumidouceelegyluxurioussealordmagicguidemailedflowermakhairaaquamarinemappamaremasterkeymemoryofdustmessengermissivewindspearmistsplitterreforgedmitternachtswaltzmoonpiercermoonweaversdawnmountainbracingboltmouunsmoonnightweaverslookingglassnocturnescurtaincalloathsworneyeoldmercspalotherworldlystorypeakpatrolsongpocketgrimoirepolarstarportablepowersawpredatorprimordialjadecutterprimordialjadewingedspearprospectorsdrillprospectorsshovelprototypeamberprototypearchaicprototypecrescentprototyperancourprototypestarglitterrainbowserpentsrainbowrainslasherrangegaugeravenbowrecurvebowredhornstonethresherreliquaryoftruthrightfulrewardringofyaxcheroyalbowroyalgreatswordroyalgrimoireroyallongswordroyalspearrustsacrificersstaffsacrificialbowsacrificialfragmentssacrificialgreatswordsacrificialjadesacrificialswordsapwoodbladescionoftheblazingsunseasonedhuntersbowsequenceofsolitudeserenityscallserpentspinesharpshootersoathsilvershowerheartstringssilverswordskyridergreatswordskyriderswordskywardatlasskywardbladeskywardharpskywardprideskywardspineslingshotsnarehooksnowtombedstarsilversolarpearlsongofbrokenpinessongofstillnesssplendoroftranquilwatersstaffofhomastaffofthescarletsandsstarcallerswatchsturdybonesummitshapersunnymorningsleepinsurfsupswordofdescensionswordofnarzissenkreuzsymphonistofscentstalkingsticktamayurateinoohanashithealleyflashthebelltheblackswordthecatchthedockhandsassistantthefirstgreatmagictheflutethestringlesstheunforgedtheviridescenthuntthewidsiththrillingtalesofdragonslayersthunderingpulsetidalshadowtomeoftheeternalflowtoukaboushiguretravelershandyswordtulaytullahsremembrancetwinnephriteultimateoverlordsmegamagicswordurakumisugiriverdictvividnotionsvortexvanquisherwanderingevenstarwastergreatswordwavebreakersfinwaveridingwhirlwhiteblindwhiteirongreatswordwhitetasselwindblumeodewineandsongwolffangwolfsgravestonexiphosmoonlightinvalidweapon"
 
 func (i Weapon) String() string {
 	if i < 0 || i >= Weapon(len(_WeaponIndex)-1) {
@@ -93,171 +93,172 @@ func _WeaponNoOp() {
 	_ = x[FesteringDesire-(65)]
 	_ = x[FilletBlade-(66)]
 	_ = x[FinaleOfTheDeep-(67)]
-	_ = x[FleuveCendreFerryman-(68)]
-	_ = x[FlowerWreathedFeathers-(69)]
-	_ = x[FlowingPurity-(70)]
-	_ = x[FluteOfEzpitzal-(71)]
-	_ = x[FootprintOfTheRainbow-(72)]
-	_ = x[ForestRegalia-(73)]
-	_ = x[FracturedHalo-(74)]
-	_ = x[FreedomSworn-(75)]
-	_ = x[Frostbearer-(76)]
-	_ = x[FruitfulHook-(77)]
-	_ = x[FruitOfFulfillment-(78)]
-	_ = x[GestOfTheMightyWolf-(79)]
-	_ = x[HakushinRing-(80)]
-	_ = x[Halberd-(81)]
-	_ = x[Hamayumi-(82)]
-	_ = x[HaranGeppakuFutsu-(83)]
-	_ = x[HarbingerOfDawn-(84)]
-	_ = x[HuntersBow-(85)]
-	_ = x[HuntersPath-(86)]
-	_ = x[IbisPiercer-(87)]
-	_ = x[IronPoint-(88)]
-	_ = x[IronSting-(89)]
-	_ = x[JadefallsSplendor-(90)]
-	_ = x[KagotsurubeIsshin-(91)]
-	_ = x[KagurasVerity-(92)]
-	_ = x[KatsuragikiriNagamasa-(93)]
-	_ = x[KeyOfKhajNisut-(94)]
-	_ = x[KingsSquire-(95)]
-	_ = x[KitainCrossSpear-(96)]
-	_ = x[LightOfFoliarIncision-(97)]
-	_ = x[LionsRoar-(98)]
-	_ = x[LithicBlade-(99)]
-	_ = x[LithicSpear-(100)]
-	_ = x[LostPrayerToTheSacredWinds-(101)]
-	_ = x[LumidouceElegy-(102)]
-	_ = x[LuxuriousSeaLord-(103)]
-	_ = x[MagicGuide-(104)]
-	_ = x[MailedFlower-(105)]
-	_ = x[MakhairaAquamarine-(106)]
-	_ = x[MappaMare-(107)]
-	_ = x[MasterKey-(108)]
-	_ = x[MemoryOfDust-(109)]
-	_ = x[Messenger-(110)]
-	_ = x[MissiveWindspear-(111)]
-	_ = x[MistsplitterReforged-(112)]
-	_ = x[MitternachtsWaltz-(113)]
-	_ = x[Moonpiercer-(114)]
-	_ = x[MoonweaversDawn-(115)]
-	_ = x[MountainBracingBolt-(116)]
-	_ = x[MouunsMoon-(117)]
-	_ = x[NightweaversLookingGlass-(118)]
-	_ = x[NocturnesCurtainCall-(119)]
-	_ = x[OathswornEye-(120)]
-	_ = x[OldMercsPal-(121)]
-	_ = x[OtherworldlyStory-(122)]
-	_ = x[PeakPatrolSong-(123)]
-	_ = x[PocketGrimoire-(124)]
-	_ = x[PolarStar-(125)]
-	_ = x[PortablePowerSaw-(126)]
-	_ = x[Predator-(127)]
-	_ = x[PrimordialJadeCutter-(128)]
-	_ = x[PrimordialJadeWingedSpear-(129)]
-	_ = x[ProspectorsDrill-(130)]
-	_ = x[ProspectorsShovel-(131)]
-	_ = x[PrototypeAmber-(132)]
-	_ = x[PrototypeArchaic-(133)]
-	_ = x[PrototypeCrescent-(134)]
-	_ = x[PrototypeRancour-(135)]
-	_ = x[PrototypeStarglitter-(136)]
-	_ = x[RainbowSerpentsRainBow-(137)]
-	_ = x[Rainslasher-(138)]
-	_ = x[RangeGauge-(139)]
-	_ = x[RavenBow-(140)]
-	_ = x[RecurveBow-(141)]
-	_ = x[RedhornStonethresher-(142)]
-	_ = x[ReliquaryOfTruth-(143)]
-	_ = x[RightfulReward-(144)]
-	_ = x[RingOfYaxche-(145)]
-	_ = x[RoyalBow-(146)]
-	_ = x[RoyalGreatsword-(147)]
-	_ = x[RoyalGrimoire-(148)]
-	_ = x[RoyalLongsword-(149)]
-	_ = x[RoyalSpear-(150)]
-	_ = x[Rust-(151)]
-	_ = x[SacrificersStaff-(152)]
-	_ = x[SacrificialBow-(153)]
-	_ = x[SacrificialFragments-(154)]
-	_ = x[SacrificialGreatsword-(155)]
-	_ = x[SacrificialJade-(156)]
-	_ = x[SacrificialSword-(157)]
-	_ = x[SapwoodBlade-(158)]
-	_ = x[ScionOfTheBlazingSun-(159)]
-	_ = x[SeasonedHuntersBow-(160)]
-	_ = x[SequenceOfSolitude-(161)]
-	_ = x[SerenitysCall-(162)]
-	_ = x[SerpentSpine-(163)]
-	_ = x[SharpshootersOath-(164)]
-	_ = x[SilvershowerHeartstrings-(165)]
-	_ = x[SilverSword-(166)]
-	_ = x[SkyriderGreatsword-(167)]
-	_ = x[SkyriderSword-(168)]
-	_ = x[SkywardAtlas-(169)]
-	_ = x[SkywardBlade-(170)]
-	_ = x[SkywardHarp-(171)]
-	_ = x[SkywardPride-(172)]
-	_ = x[SkywardSpine-(173)]
-	_ = x[Slingshot-(174)]
-	_ = x[SnareHook-(175)]
-	_ = x[SnowTombedStarsilver-(176)]
-	_ = x[SolarPearl-(177)]
-	_ = x[SongOfBrokenPines-(178)]
-	_ = x[SongOfStillness-(179)]
-	_ = x[SplendorOfTranquilWaters-(180)]
-	_ = x[StaffOfHoma-(181)]
-	_ = x[StaffOfTheScarletSands-(182)]
-	_ = x[StarcallersWatch-(183)]
-	_ = x[SturdyBone-(184)]
-	_ = x[SummitShaper-(185)]
-	_ = x[SunnyMorningSleepIn-(186)]
-	_ = x[SurfsUp-(187)]
-	_ = x[SwordOfDescension-(188)]
-	_ = x[SwordOfNarzissenkreuz-(189)]
-	_ = x[SymphonistOfScents-(190)]
-	_ = x[TalkingStick-(191)]
-	_ = x[TamayurateiNoOhanashi-(192)]
-	_ = x[TheAlleyFlash-(193)]
-	_ = x[TheBell-(194)]
-	_ = x[TheBlackSword-(195)]
-	_ = x[TheCatch-(196)]
-	_ = x[TheDockhandsAssistant-(197)]
-	_ = x[TheFirstGreatMagic-(198)]
-	_ = x[TheFlute-(199)]
-	_ = x[TheStringless-(200)]
-	_ = x[TheUnforged-(201)]
-	_ = x[TheViridescentHunt-(202)]
-	_ = x[TheWidsith-(203)]
-	_ = x[ThrillingTalesOfDragonSlayers-(204)]
-	_ = x[ThunderingPulse-(205)]
-	_ = x[TidalShadow-(206)]
-	_ = x[TomeOfTheEternalFlow-(207)]
-	_ = x[ToukabouShigure-(208)]
-	_ = x[TravelersHandySword-(209)]
-	_ = x[TulaytullahsRemembrance-(210)]
-	_ = x[TwinNephrite-(211)]
-	_ = x[UltimateOverlordsMegaMagicSword-(212)]
-	_ = x[UrakuMisugiri-(213)]
-	_ = x[Verdict-(214)]
-	_ = x[VividNotions-(215)]
-	_ = x[VortexVanquisher-(216)]
-	_ = x[WanderingEvenstar-(217)]
-	_ = x[WasterGreatsword-(218)]
-	_ = x[WavebreakersFin-(219)]
-	_ = x[WaveridingWhirl-(220)]
-	_ = x[Whiteblind-(221)]
-	_ = x[WhiteIronGreatsword-(222)]
-	_ = x[WhiteTassel-(223)]
-	_ = x[WindblumeOde-(224)]
-	_ = x[WineAndSong-(225)]
-	_ = x[WolfFang-(226)]
-	_ = x[WolfsGravestone-(227)]
-	_ = x[XiphosMoonlight-(228)]
-	_ = x[InvalidWeapon-(229)]
+	_ = x[FlameForgedInsight-(68)]
+	_ = x[FleuveCendreFerryman-(69)]
+	_ = x[FlowerWreathedFeathers-(70)]
+	_ = x[FlowingPurity-(71)]
+	_ = x[FluteOfEzpitzal-(72)]
+	_ = x[FootprintOfTheRainbow-(73)]
+	_ = x[ForestRegalia-(74)]
+	_ = x[FracturedHalo-(75)]
+	_ = x[FreedomSworn-(76)]
+	_ = x[Frostbearer-(77)]
+	_ = x[FruitfulHook-(78)]
+	_ = x[FruitOfFulfillment-(79)]
+	_ = x[GestOfTheMightyWolf-(80)]
+	_ = x[HakushinRing-(81)]
+	_ = x[Halberd-(82)]
+	_ = x[Hamayumi-(83)]
+	_ = x[HaranGeppakuFutsu-(84)]
+	_ = x[HarbingerOfDawn-(85)]
+	_ = x[HuntersBow-(86)]
+	_ = x[HuntersPath-(87)]
+	_ = x[IbisPiercer-(88)]
+	_ = x[IronPoint-(89)]
+	_ = x[IronSting-(90)]
+	_ = x[JadefallsSplendor-(91)]
+	_ = x[KagotsurubeIsshin-(92)]
+	_ = x[KagurasVerity-(93)]
+	_ = x[KatsuragikiriNagamasa-(94)]
+	_ = x[KeyOfKhajNisut-(95)]
+	_ = x[KingsSquire-(96)]
+	_ = x[KitainCrossSpear-(97)]
+	_ = x[LightOfFoliarIncision-(98)]
+	_ = x[LionsRoar-(99)]
+	_ = x[LithicBlade-(100)]
+	_ = x[LithicSpear-(101)]
+	_ = x[LostPrayerToTheSacredWinds-(102)]
+	_ = x[LumidouceElegy-(103)]
+	_ = x[LuxuriousSeaLord-(104)]
+	_ = x[MagicGuide-(105)]
+	_ = x[MailedFlower-(106)]
+	_ = x[MakhairaAquamarine-(107)]
+	_ = x[MappaMare-(108)]
+	_ = x[MasterKey-(109)]
+	_ = x[MemoryOfDust-(110)]
+	_ = x[Messenger-(111)]
+	_ = x[MissiveWindspear-(112)]
+	_ = x[MistsplitterReforged-(113)]
+	_ = x[MitternachtsWaltz-(114)]
+	_ = x[Moonpiercer-(115)]
+	_ = x[MoonweaversDawn-(116)]
+	_ = x[MountainBracingBolt-(117)]
+	_ = x[MouunsMoon-(118)]
+	_ = x[NightweaversLookingGlass-(119)]
+	_ = x[NocturnesCurtainCall-(120)]
+	_ = x[OathswornEye-(121)]
+	_ = x[OldMercsPal-(122)]
+	_ = x[OtherworldlyStory-(123)]
+	_ = x[PeakPatrolSong-(124)]
+	_ = x[PocketGrimoire-(125)]
+	_ = x[PolarStar-(126)]
+	_ = x[PortablePowerSaw-(127)]
+	_ = x[Predator-(128)]
+	_ = x[PrimordialJadeCutter-(129)]
+	_ = x[PrimordialJadeWingedSpear-(130)]
+	_ = x[ProspectorsDrill-(131)]
+	_ = x[ProspectorsShovel-(132)]
+	_ = x[PrototypeAmber-(133)]
+	_ = x[PrototypeArchaic-(134)]
+	_ = x[PrototypeCrescent-(135)]
+	_ = x[PrototypeRancour-(136)]
+	_ = x[PrototypeStarglitter-(137)]
+	_ = x[RainbowSerpentsRainBow-(138)]
+	_ = x[Rainslasher-(139)]
+	_ = x[RangeGauge-(140)]
+	_ = x[RavenBow-(141)]
+	_ = x[RecurveBow-(142)]
+	_ = x[RedhornStonethresher-(143)]
+	_ = x[ReliquaryOfTruth-(144)]
+	_ = x[RightfulReward-(145)]
+	_ = x[RingOfYaxche-(146)]
+	_ = x[RoyalBow-(147)]
+	_ = x[RoyalGreatsword-(148)]
+	_ = x[RoyalGrimoire-(149)]
+	_ = x[RoyalLongsword-(150)]
+	_ = x[RoyalSpear-(151)]
+	_ = x[Rust-(152)]
+	_ = x[SacrificersStaff-(153)]
+	_ = x[SacrificialBow-(154)]
+	_ = x[SacrificialFragments-(155)]
+	_ = x[SacrificialGreatsword-(156)]
+	_ = x[SacrificialJade-(157)]
+	_ = x[SacrificialSword-(158)]
+	_ = x[SapwoodBlade-(159)]
+	_ = x[ScionOfTheBlazingSun-(160)]
+	_ = x[SeasonedHuntersBow-(161)]
+	_ = x[SequenceOfSolitude-(162)]
+	_ = x[SerenitysCall-(163)]
+	_ = x[SerpentSpine-(164)]
+	_ = x[SharpshootersOath-(165)]
+	_ = x[SilvershowerHeartstrings-(166)]
+	_ = x[SilverSword-(167)]
+	_ = x[SkyriderGreatsword-(168)]
+	_ = x[SkyriderSword-(169)]
+	_ = x[SkywardAtlas-(170)]
+	_ = x[SkywardBlade-(171)]
+	_ = x[SkywardHarp-(172)]
+	_ = x[SkywardPride-(173)]
+	_ = x[SkywardSpine-(174)]
+	_ = x[Slingshot-(175)]
+	_ = x[SnareHook-(176)]
+	_ = x[SnowTombedStarsilver-(177)]
+	_ = x[SolarPearl-(178)]
+	_ = x[SongOfBrokenPines-(179)]
+	_ = x[SongOfStillness-(180)]
+	_ = x[SplendorOfTranquilWaters-(181)]
+	_ = x[StaffOfHoma-(182)]
+	_ = x[StaffOfTheScarletSands-(183)]
+	_ = x[StarcallersWatch-(184)]
+	_ = x[SturdyBone-(185)]
+	_ = x[SummitShaper-(186)]
+	_ = x[SunnyMorningSleepIn-(187)]
+	_ = x[SurfsUp-(188)]
+	_ = x[SwordOfDescension-(189)]
+	_ = x[SwordOfNarzissenkreuz-(190)]
+	_ = x[SymphonistOfScents-(191)]
+	_ = x[TalkingStick-(192)]
+	_ = x[TamayurateiNoOhanashi-(193)]
+	_ = x[TheAlleyFlash-(194)]
+	_ = x[TheBell-(195)]
+	_ = x[TheBlackSword-(196)]
+	_ = x[TheCatch-(197)]
+	_ = x[TheDockhandsAssistant-(198)]
+	_ = x[TheFirstGreatMagic-(199)]
+	_ = x[TheFlute-(200)]
+	_ = x[TheStringless-(201)]
+	_ = x[TheUnforged-(202)]
+	_ = x[TheViridescentHunt-(203)]
+	_ = x[TheWidsith-(204)]
+	_ = x[ThrillingTalesOfDragonSlayers-(205)]
+	_ = x[ThunderingPulse-(206)]
+	_ = x[TidalShadow-(207)]
+	_ = x[TomeOfTheEternalFlow-(208)]
+	_ = x[ToukabouShigure-(209)]
+	_ = x[TravelersHandySword-(210)]
+	_ = x[TulaytullahsRemembrance-(211)]
+	_ = x[TwinNephrite-(212)]
+	_ = x[UltimateOverlordsMegaMagicSword-(213)]
+	_ = x[UrakuMisugiri-(214)]
+	_ = x[Verdict-(215)]
+	_ = x[VividNotions-(216)]
+	_ = x[VortexVanquisher-(217)]
+	_ = x[WanderingEvenstar-(218)]
+	_ = x[WasterGreatsword-(219)]
+	_ = x[WavebreakersFin-(220)]
+	_ = x[WaveridingWhirl-(221)]
+	_ = x[Whiteblind-(222)]
+	_ = x[WhiteIronGreatsword-(223)]
+	_ = x[WhiteTassel-(224)]
+	_ = x[WindblumeOde-(225)]
+	_ = x[WineAndSong-(226)]
+	_ = x[WolfFang-(227)]
+	_ = x[WolfsGravestone-(228)]
+	_ = x[XiphosMoonlight-(229)]
+	_ = x[InvalidWeapon-(230)]
 }
 
-var _WeaponValues = []Weapon{NoWeapon, Absolution, Akuoumaru, AlleyHunter, AmenomaKageuchi, AmosBow, AngelosHeptades, ApprenticesNotes, AquaSimulacra, AquilaFavonia, AshGravenDrinkingHorn, AstralVulturesCrimsonPlumage, AthameArtis, AThousandBlazingSuns, AThousandFloatingDreams, Azurelight, BalladOfTheBoundlessBlue, BalladOfTheFjords, BeaconOfTheReedSea, BeginnersProtector, BlackcliffAgate, BlackcliffLongsword, BlackcliffPole, BlackcliffSlasher, BlackcliffWarbow, BlackmarrowLantern, BlackTassel, BloodsoakedRuins, BloodtaintedGreatsword, CalamityOfEshu, CalamityQueller, CashflowSupervision, ChainBreaker, CinnabarSpindle, Cloudforged, CompoundBow, CoolSteel, CranesEchoingCall, CrescentPike, CrimsonMoonsSemblance, DarkIronSword, DawningFrost, Deathmatch, DebateClub, DialoguesOfTheDesertSages, DodocoTales, DragonsBane, DragonspineSpear, DullBlade, EarthShaker, ElegyForTheEnd, EmeraldOrb, EndOfTheLine, EngulfingLightning, EtherlightSpindlelute, EverlastingMoonglow, EyeOfPerception, FadingTwilight, FangOfTheMountainKing, FavoniusCodex, FavoniusGreatsword, FavoniusLance, FavoniusSword, FavoniusWarbow, FerrousShadow, FesteringDesire, FilletBlade, FinaleOfTheDeep, FleuveCendreFerryman, FlowerWreathedFeathers, FlowingPurity, FluteOfEzpitzal, FootprintOfTheRainbow, ForestRegalia, FracturedHalo, FreedomSworn, Frostbearer, FruitfulHook, FruitOfFulfillment, GestOfTheMightyWolf, HakushinRing, Halberd, Hamayumi, HaranGeppakuFutsu, HarbingerOfDawn, HuntersBow, HuntersPath, IbisPiercer, IronPoint, IronSting, JadefallsSplendor, KagotsurubeIsshin, KagurasVerity, KatsuragikiriNagamasa, KeyOfKhajNisut, KingsSquire, KitainCrossSpear, LightOfFoliarIncision, LionsRoar, LithicBlade, LithicSpear, LostPrayerToTheSacredWinds, LumidouceElegy, LuxuriousSeaLord, MagicGuide, MailedFlower, MakhairaAquamarine, MappaMare, MasterKey, MemoryOfDust, Messenger, MissiveWindspear, MistsplitterReforged, MitternachtsWaltz, Moonpiercer, MoonweaversDawn, MountainBracingBolt, MouunsMoon, NightweaversLookingGlass, NocturnesCurtainCall, OathswornEye, OldMercsPal, OtherworldlyStory, PeakPatrolSong, PocketGrimoire, PolarStar, PortablePowerSaw, Predator, PrimordialJadeCutter, PrimordialJadeWingedSpear, ProspectorsDrill, ProspectorsShovel, PrototypeAmber, PrototypeArchaic, PrototypeCrescent, PrototypeRancour, PrototypeStarglitter, RainbowSerpentsRainBow, Rainslasher, RangeGauge, RavenBow, RecurveBow, RedhornStonethresher, ReliquaryOfTruth, RightfulReward, RingOfYaxche, RoyalBow, RoyalGreatsword, RoyalGrimoire, RoyalLongsword, RoyalSpear, Rust, SacrificersStaff, SacrificialBow, SacrificialFragments, SacrificialGreatsword, SacrificialJade, SacrificialSword, SapwoodBlade, ScionOfTheBlazingSun, SeasonedHuntersBow, SequenceOfSolitude, SerenitysCall, SerpentSpine, SharpshootersOath, SilvershowerHeartstrings, SilverSword, SkyriderGreatsword, SkyriderSword, SkywardAtlas, SkywardBlade, SkywardHarp, SkywardPride, SkywardSpine, Slingshot, SnareHook, SnowTombedStarsilver, SolarPearl, SongOfBrokenPines, SongOfStillness, SplendorOfTranquilWaters, StaffOfHoma, StaffOfTheScarletSands, StarcallersWatch, SturdyBone, SummitShaper, SunnyMorningSleepIn, SurfsUp, SwordOfDescension, SwordOfNarzissenkreuz, SymphonistOfScents, TalkingStick, TamayurateiNoOhanashi, TheAlleyFlash, TheBell, TheBlackSword, TheCatch, TheDockhandsAssistant, TheFirstGreatMagic, TheFlute, TheStringless, TheUnforged, TheViridescentHunt, TheWidsith, ThrillingTalesOfDragonSlayers, ThunderingPulse, TidalShadow, TomeOfTheEternalFlow, ToukabouShigure, TravelersHandySword, TulaytullahsRemembrance, TwinNephrite, UltimateOverlordsMegaMagicSword, UrakuMisugiri, Verdict, VividNotions, VortexVanquisher, WanderingEvenstar, WasterGreatsword, WavebreakersFin, WaveridingWhirl, Whiteblind, WhiteIronGreatsword, WhiteTassel, WindblumeOde, WineAndSong, WolfFang, WolfsGravestone, XiphosMoonlight, InvalidWeapon}
+var _WeaponValues = []Weapon{NoWeapon, Absolution, Akuoumaru, AlleyHunter, AmenomaKageuchi, AmosBow, AngelosHeptades, ApprenticesNotes, AquaSimulacra, AquilaFavonia, AshGravenDrinkingHorn, AstralVulturesCrimsonPlumage, AthameArtis, AThousandBlazingSuns, AThousandFloatingDreams, Azurelight, BalladOfTheBoundlessBlue, BalladOfTheFjords, BeaconOfTheReedSea, BeginnersProtector, BlackcliffAgate, BlackcliffLongsword, BlackcliffPole, BlackcliffSlasher, BlackcliffWarbow, BlackmarrowLantern, BlackTassel, BloodsoakedRuins, BloodtaintedGreatsword, CalamityOfEshu, CalamityQueller, CashflowSupervision, ChainBreaker, CinnabarSpindle, Cloudforged, CompoundBow, CoolSteel, CranesEchoingCall, CrescentPike, CrimsonMoonsSemblance, DarkIronSword, DawningFrost, Deathmatch, DebateClub, DialoguesOfTheDesertSages, DodocoTales, DragonsBane, DragonspineSpear, DullBlade, EarthShaker, ElegyForTheEnd, EmeraldOrb, EndOfTheLine, EngulfingLightning, EtherlightSpindlelute, EverlastingMoonglow, EyeOfPerception, FadingTwilight, FangOfTheMountainKing, FavoniusCodex, FavoniusGreatsword, FavoniusLance, FavoniusSword, FavoniusWarbow, FerrousShadow, FesteringDesire, FilletBlade, FinaleOfTheDeep, FlameForgedInsight, FleuveCendreFerryman, FlowerWreathedFeathers, FlowingPurity, FluteOfEzpitzal, FootprintOfTheRainbow, ForestRegalia, FracturedHalo, FreedomSworn, Frostbearer, FruitfulHook, FruitOfFulfillment, GestOfTheMightyWolf, HakushinRing, Halberd, Hamayumi, HaranGeppakuFutsu, HarbingerOfDawn, HuntersBow, HuntersPath, IbisPiercer, IronPoint, IronSting, JadefallsSplendor, KagotsurubeIsshin, KagurasVerity, KatsuragikiriNagamasa, KeyOfKhajNisut, KingsSquire, KitainCrossSpear, LightOfFoliarIncision, LionsRoar, LithicBlade, LithicSpear, LostPrayerToTheSacredWinds, LumidouceElegy, LuxuriousSeaLord, MagicGuide, MailedFlower, MakhairaAquamarine, MappaMare, MasterKey, MemoryOfDust, Messenger, MissiveWindspear, MistsplitterReforged, MitternachtsWaltz, Moonpiercer, MoonweaversDawn, MountainBracingBolt, MouunsMoon, NightweaversLookingGlass, NocturnesCurtainCall, OathswornEye, OldMercsPal, OtherworldlyStory, PeakPatrolSong, PocketGrimoire, PolarStar, PortablePowerSaw, Predator, PrimordialJadeCutter, PrimordialJadeWingedSpear, ProspectorsDrill, ProspectorsShovel, PrototypeAmber, PrototypeArchaic, PrototypeCrescent, PrototypeRancour, PrototypeStarglitter, RainbowSerpentsRainBow, Rainslasher, RangeGauge, RavenBow, RecurveBow, RedhornStonethresher, ReliquaryOfTruth, RightfulReward, RingOfYaxche, RoyalBow, RoyalGreatsword, RoyalGrimoire, RoyalLongsword, RoyalSpear, Rust, SacrificersStaff, SacrificialBow, SacrificialFragments, SacrificialGreatsword, SacrificialJade, SacrificialSword, SapwoodBlade, ScionOfTheBlazingSun, SeasonedHuntersBow, SequenceOfSolitude, SerenitysCall, SerpentSpine, SharpshootersOath, SilvershowerHeartstrings, SilverSword, SkyriderGreatsword, SkyriderSword, SkywardAtlas, SkywardBlade, SkywardHarp, SkywardPride, SkywardSpine, Slingshot, SnareHook, SnowTombedStarsilver, SolarPearl, SongOfBrokenPines, SongOfStillness, SplendorOfTranquilWaters, StaffOfHoma, StaffOfTheScarletSands, StarcallersWatch, SturdyBone, SummitShaper, SunnyMorningSleepIn, SurfsUp, SwordOfDescension, SwordOfNarzissenkreuz, SymphonistOfScents, TalkingStick, TamayurateiNoOhanashi, TheAlleyFlash, TheBell, TheBlackSword, TheCatch, TheDockhandsAssistant, TheFirstGreatMagic, TheFlute, TheStringless, TheUnforged, TheViridescentHunt, TheWidsith, ThrillingTalesOfDragonSlayers, ThunderingPulse, TidalShadow, TomeOfTheEternalFlow, ToukabouShigure, TravelersHandySword, TulaytullahsRemembrance, TwinNephrite, UltimateOverlordsMegaMagicSword, UrakuMisugiri, Verdict, VividNotions, VortexVanquisher, WanderingEvenstar, WasterGreatsword, WavebreakersFin, WaveridingWhirl, Whiteblind, WhiteIronGreatsword, WhiteTassel, WindblumeOde, WineAndSong, WolfFang, WolfsGravestone, XiphosMoonlight, InvalidWeapon}
 
 var _WeaponNameToValueMap = map[string]Weapon{
 	_WeaponName[0:0]:            NoWeapon,
@@ -396,330 +397,332 @@ var _WeaponNameToValueMap = map[string]Weapon{
 	_WeaponLowerName[974:985]:   FilletBlade,
 	_WeaponName[985:1000]:       FinaleOfTheDeep,
 	_WeaponLowerName[985:1000]:  FinaleOfTheDeep,
-	_WeaponName[1000:1020]:      FleuveCendreFerryman,
-	_WeaponLowerName[1000:1020]: FleuveCendreFerryman,
-	_WeaponName[1020:1042]:      FlowerWreathedFeathers,
-	_WeaponLowerName[1020:1042]: FlowerWreathedFeathers,
-	_WeaponName[1042:1055]:      FlowingPurity,
-	_WeaponLowerName[1042:1055]: FlowingPurity,
-	_WeaponName[1055:1070]:      FluteOfEzpitzal,
-	_WeaponLowerName[1055:1070]: FluteOfEzpitzal,
-	_WeaponName[1070:1091]:      FootprintOfTheRainbow,
-	_WeaponLowerName[1070:1091]: FootprintOfTheRainbow,
-	_WeaponName[1091:1104]:      ForestRegalia,
-	_WeaponLowerName[1091:1104]: ForestRegalia,
-	_WeaponName[1104:1117]:      FracturedHalo,
-	_WeaponLowerName[1104:1117]: FracturedHalo,
-	_WeaponName[1117:1129]:      FreedomSworn,
-	_WeaponLowerName[1117:1129]: FreedomSworn,
-	_WeaponName[1129:1140]:      Frostbearer,
-	_WeaponLowerName[1129:1140]: Frostbearer,
-	_WeaponName[1140:1152]:      FruitfulHook,
-	_WeaponLowerName[1140:1152]: FruitfulHook,
-	_WeaponName[1152:1170]:      FruitOfFulfillment,
-	_WeaponLowerName[1152:1170]: FruitOfFulfillment,
-	_WeaponName[1170:1189]:      GestOfTheMightyWolf,
-	_WeaponLowerName[1170:1189]: GestOfTheMightyWolf,
-	_WeaponName[1189:1201]:      HakushinRing,
-	_WeaponLowerName[1189:1201]: HakushinRing,
-	_WeaponName[1201:1208]:      Halberd,
-	_WeaponLowerName[1201:1208]: Halberd,
-	_WeaponName[1208:1216]:      Hamayumi,
-	_WeaponLowerName[1208:1216]: Hamayumi,
-	_WeaponName[1216:1233]:      HaranGeppakuFutsu,
-	_WeaponLowerName[1216:1233]: HaranGeppakuFutsu,
-	_WeaponName[1233:1248]:      HarbingerOfDawn,
-	_WeaponLowerName[1233:1248]: HarbingerOfDawn,
-	_WeaponName[1248:1258]:      HuntersBow,
-	_WeaponLowerName[1248:1258]: HuntersBow,
-	_WeaponName[1258:1269]:      HuntersPath,
-	_WeaponLowerName[1258:1269]: HuntersPath,
-	_WeaponName[1269:1280]:      IbisPiercer,
-	_WeaponLowerName[1269:1280]: IbisPiercer,
-	_WeaponName[1280:1289]:      IronPoint,
-	_WeaponLowerName[1280:1289]: IronPoint,
-	_WeaponName[1289:1298]:      IronSting,
-	_WeaponLowerName[1289:1298]: IronSting,
-	_WeaponName[1298:1315]:      JadefallsSplendor,
-	_WeaponLowerName[1298:1315]: JadefallsSplendor,
-	_WeaponName[1315:1332]:      KagotsurubeIsshin,
-	_WeaponLowerName[1315:1332]: KagotsurubeIsshin,
-	_WeaponName[1332:1345]:      KagurasVerity,
-	_WeaponLowerName[1332:1345]: KagurasVerity,
-	_WeaponName[1345:1366]:      KatsuragikiriNagamasa,
-	_WeaponLowerName[1345:1366]: KatsuragikiriNagamasa,
-	_WeaponName[1366:1380]:      KeyOfKhajNisut,
-	_WeaponLowerName[1366:1380]: KeyOfKhajNisut,
-	_WeaponName[1380:1391]:      KingsSquire,
-	_WeaponLowerName[1380:1391]: KingsSquire,
-	_WeaponName[1391:1407]:      KitainCrossSpear,
-	_WeaponLowerName[1391:1407]: KitainCrossSpear,
-	_WeaponName[1407:1428]:      LightOfFoliarIncision,
-	_WeaponLowerName[1407:1428]: LightOfFoliarIncision,
-	_WeaponName[1428:1437]:      LionsRoar,
-	_WeaponLowerName[1428:1437]: LionsRoar,
-	_WeaponName[1437:1448]:      LithicBlade,
-	_WeaponLowerName[1437:1448]: LithicBlade,
-	_WeaponName[1448:1459]:      LithicSpear,
-	_WeaponLowerName[1448:1459]: LithicSpear,
-	_WeaponName[1459:1485]:      LostPrayerToTheSacredWinds,
-	_WeaponLowerName[1459:1485]: LostPrayerToTheSacredWinds,
-	_WeaponName[1485:1499]:      LumidouceElegy,
-	_WeaponLowerName[1485:1499]: LumidouceElegy,
-	_WeaponName[1499:1515]:      LuxuriousSeaLord,
-	_WeaponLowerName[1499:1515]: LuxuriousSeaLord,
-	_WeaponName[1515:1525]:      MagicGuide,
-	_WeaponLowerName[1515:1525]: MagicGuide,
-	_WeaponName[1525:1537]:      MailedFlower,
-	_WeaponLowerName[1525:1537]: MailedFlower,
-	_WeaponName[1537:1555]:      MakhairaAquamarine,
-	_WeaponLowerName[1537:1555]: MakhairaAquamarine,
-	_WeaponName[1555:1564]:      MappaMare,
-	_WeaponLowerName[1555:1564]: MappaMare,
-	_WeaponName[1564:1573]:      MasterKey,
-	_WeaponLowerName[1564:1573]: MasterKey,
-	_WeaponName[1573:1585]:      MemoryOfDust,
-	_WeaponLowerName[1573:1585]: MemoryOfDust,
-	_WeaponName[1585:1594]:      Messenger,
-	_WeaponLowerName[1585:1594]: Messenger,
-	_WeaponName[1594:1610]:      MissiveWindspear,
-	_WeaponLowerName[1594:1610]: MissiveWindspear,
-	_WeaponName[1610:1630]:      MistsplitterReforged,
-	_WeaponLowerName[1610:1630]: MistsplitterReforged,
-	_WeaponName[1630:1647]:      MitternachtsWaltz,
-	_WeaponLowerName[1630:1647]: MitternachtsWaltz,
-	_WeaponName[1647:1658]:      Moonpiercer,
-	_WeaponLowerName[1647:1658]: Moonpiercer,
-	_WeaponName[1658:1673]:      MoonweaversDawn,
-	_WeaponLowerName[1658:1673]: MoonweaversDawn,
-	_WeaponName[1673:1692]:      MountainBracingBolt,
-	_WeaponLowerName[1673:1692]: MountainBracingBolt,
-	_WeaponName[1692:1702]:      MouunsMoon,
-	_WeaponLowerName[1692:1702]: MouunsMoon,
-	_WeaponName[1702:1726]:      NightweaversLookingGlass,
-	_WeaponLowerName[1702:1726]: NightweaversLookingGlass,
-	_WeaponName[1726:1746]:      NocturnesCurtainCall,
-	_WeaponLowerName[1726:1746]: NocturnesCurtainCall,
-	_WeaponName[1746:1758]:      OathswornEye,
-	_WeaponLowerName[1746:1758]: OathswornEye,
-	_WeaponName[1758:1769]:      OldMercsPal,
-	_WeaponLowerName[1758:1769]: OldMercsPal,
-	_WeaponName[1769:1786]:      OtherworldlyStory,
-	_WeaponLowerName[1769:1786]: OtherworldlyStory,
-	_WeaponName[1786:1800]:      PeakPatrolSong,
-	_WeaponLowerName[1786:1800]: PeakPatrolSong,
-	_WeaponName[1800:1814]:      PocketGrimoire,
-	_WeaponLowerName[1800:1814]: PocketGrimoire,
-	_WeaponName[1814:1823]:      PolarStar,
-	_WeaponLowerName[1814:1823]: PolarStar,
-	_WeaponName[1823:1839]:      PortablePowerSaw,
-	_WeaponLowerName[1823:1839]: PortablePowerSaw,
-	_WeaponName[1839:1847]:      Predator,
-	_WeaponLowerName[1839:1847]: Predator,
-	_WeaponName[1847:1867]:      PrimordialJadeCutter,
-	_WeaponLowerName[1847:1867]: PrimordialJadeCutter,
-	_WeaponName[1867:1892]:      PrimordialJadeWingedSpear,
-	_WeaponLowerName[1867:1892]: PrimordialJadeWingedSpear,
-	_WeaponName[1892:1908]:      ProspectorsDrill,
-	_WeaponLowerName[1892:1908]: ProspectorsDrill,
-	_WeaponName[1908:1925]:      ProspectorsShovel,
-	_WeaponLowerName[1908:1925]: ProspectorsShovel,
-	_WeaponName[1925:1939]:      PrototypeAmber,
-	_WeaponLowerName[1925:1939]: PrototypeAmber,
-	_WeaponName[1939:1955]:      PrototypeArchaic,
-	_WeaponLowerName[1939:1955]: PrototypeArchaic,
-	_WeaponName[1955:1972]:      PrototypeCrescent,
-	_WeaponLowerName[1955:1972]: PrototypeCrescent,
-	_WeaponName[1972:1988]:      PrototypeRancour,
-	_WeaponLowerName[1972:1988]: PrototypeRancour,
-	_WeaponName[1988:2008]:      PrototypeStarglitter,
-	_WeaponLowerName[1988:2008]: PrototypeStarglitter,
-	_WeaponName[2008:2030]:      RainbowSerpentsRainBow,
-	_WeaponLowerName[2008:2030]: RainbowSerpentsRainBow,
-	_WeaponName[2030:2041]:      Rainslasher,
-	_WeaponLowerName[2030:2041]: Rainslasher,
-	_WeaponName[2041:2051]:      RangeGauge,
-	_WeaponLowerName[2041:2051]: RangeGauge,
-	_WeaponName[2051:2059]:      RavenBow,
-	_WeaponLowerName[2051:2059]: RavenBow,
-	_WeaponName[2059:2069]:      RecurveBow,
-	_WeaponLowerName[2059:2069]: RecurveBow,
-	_WeaponName[2069:2089]:      RedhornStonethresher,
-	_WeaponLowerName[2069:2089]: RedhornStonethresher,
-	_WeaponName[2089:2105]:      ReliquaryOfTruth,
-	_WeaponLowerName[2089:2105]: ReliquaryOfTruth,
-	_WeaponName[2105:2119]:      RightfulReward,
-	_WeaponLowerName[2105:2119]: RightfulReward,
-	_WeaponName[2119:2131]:      RingOfYaxche,
-	_WeaponLowerName[2119:2131]: RingOfYaxche,
-	_WeaponName[2131:2139]:      RoyalBow,
-	_WeaponLowerName[2131:2139]: RoyalBow,
-	_WeaponName[2139:2154]:      RoyalGreatsword,
-	_WeaponLowerName[2139:2154]: RoyalGreatsword,
-	_WeaponName[2154:2167]:      RoyalGrimoire,
-	_WeaponLowerName[2154:2167]: RoyalGrimoire,
-	_WeaponName[2167:2181]:      RoyalLongsword,
-	_WeaponLowerName[2167:2181]: RoyalLongsword,
-	_WeaponName[2181:2191]:      RoyalSpear,
-	_WeaponLowerName[2181:2191]: RoyalSpear,
-	_WeaponName[2191:2195]:      Rust,
-	_WeaponLowerName[2191:2195]: Rust,
-	_WeaponName[2195:2211]:      SacrificersStaff,
-	_WeaponLowerName[2195:2211]: SacrificersStaff,
-	_WeaponName[2211:2225]:      SacrificialBow,
-	_WeaponLowerName[2211:2225]: SacrificialBow,
-	_WeaponName[2225:2245]:      SacrificialFragments,
-	_WeaponLowerName[2225:2245]: SacrificialFragments,
-	_WeaponName[2245:2266]:      SacrificialGreatsword,
-	_WeaponLowerName[2245:2266]: SacrificialGreatsword,
-	_WeaponName[2266:2281]:      SacrificialJade,
-	_WeaponLowerName[2266:2281]: SacrificialJade,
-	_WeaponName[2281:2297]:      SacrificialSword,
-	_WeaponLowerName[2281:2297]: SacrificialSword,
-	_WeaponName[2297:2309]:      SapwoodBlade,
-	_WeaponLowerName[2297:2309]: SapwoodBlade,
-	_WeaponName[2309:2329]:      ScionOfTheBlazingSun,
-	_WeaponLowerName[2309:2329]: ScionOfTheBlazingSun,
-	_WeaponName[2329:2347]:      SeasonedHuntersBow,
-	_WeaponLowerName[2329:2347]: SeasonedHuntersBow,
-	_WeaponName[2347:2365]:      SequenceOfSolitude,
-	_WeaponLowerName[2347:2365]: SequenceOfSolitude,
-	_WeaponName[2365:2378]:      SerenitysCall,
-	_WeaponLowerName[2365:2378]: SerenitysCall,
-	_WeaponName[2378:2390]:      SerpentSpine,
-	_WeaponLowerName[2378:2390]: SerpentSpine,
-	_WeaponName[2390:2407]:      SharpshootersOath,
-	_WeaponLowerName[2390:2407]: SharpshootersOath,
-	_WeaponName[2407:2431]:      SilvershowerHeartstrings,
-	_WeaponLowerName[2407:2431]: SilvershowerHeartstrings,
-	_WeaponName[2431:2442]:      SilverSword,
-	_WeaponLowerName[2431:2442]: SilverSword,
-	_WeaponName[2442:2460]:      SkyriderGreatsword,
-	_WeaponLowerName[2442:2460]: SkyriderGreatsword,
-	_WeaponName[2460:2473]:      SkyriderSword,
-	_WeaponLowerName[2460:2473]: SkyriderSword,
-	_WeaponName[2473:2485]:      SkywardAtlas,
-	_WeaponLowerName[2473:2485]: SkywardAtlas,
-	_WeaponName[2485:2497]:      SkywardBlade,
-	_WeaponLowerName[2485:2497]: SkywardBlade,
-	_WeaponName[2497:2508]:      SkywardHarp,
-	_WeaponLowerName[2497:2508]: SkywardHarp,
-	_WeaponName[2508:2520]:      SkywardPride,
-	_WeaponLowerName[2508:2520]: SkywardPride,
-	_WeaponName[2520:2532]:      SkywardSpine,
-	_WeaponLowerName[2520:2532]: SkywardSpine,
-	_WeaponName[2532:2541]:      Slingshot,
-	_WeaponLowerName[2532:2541]: Slingshot,
-	_WeaponName[2541:2550]:      SnareHook,
-	_WeaponLowerName[2541:2550]: SnareHook,
-	_WeaponName[2550:2570]:      SnowTombedStarsilver,
-	_WeaponLowerName[2550:2570]: SnowTombedStarsilver,
-	_WeaponName[2570:2580]:      SolarPearl,
-	_WeaponLowerName[2570:2580]: SolarPearl,
-	_WeaponName[2580:2597]:      SongOfBrokenPines,
-	_WeaponLowerName[2580:2597]: SongOfBrokenPines,
-	_WeaponName[2597:2612]:      SongOfStillness,
-	_WeaponLowerName[2597:2612]: SongOfStillness,
-	_WeaponName[2612:2636]:      SplendorOfTranquilWaters,
-	_WeaponLowerName[2612:2636]: SplendorOfTranquilWaters,
-	_WeaponName[2636:2647]:      StaffOfHoma,
-	_WeaponLowerName[2636:2647]: StaffOfHoma,
-	_WeaponName[2647:2669]:      StaffOfTheScarletSands,
-	_WeaponLowerName[2647:2669]: StaffOfTheScarletSands,
-	_WeaponName[2669:2685]:      StarcallersWatch,
-	_WeaponLowerName[2669:2685]: StarcallersWatch,
-	_WeaponName[2685:2695]:      SturdyBone,
-	_WeaponLowerName[2685:2695]: SturdyBone,
-	_WeaponName[2695:2707]:      SummitShaper,
-	_WeaponLowerName[2695:2707]: SummitShaper,
-	_WeaponName[2707:2726]:      SunnyMorningSleepIn,
-	_WeaponLowerName[2707:2726]: SunnyMorningSleepIn,
-	_WeaponName[2726:2733]:      SurfsUp,
-	_WeaponLowerName[2726:2733]: SurfsUp,
-	_WeaponName[2733:2750]:      SwordOfDescension,
-	_WeaponLowerName[2733:2750]: SwordOfDescension,
-	_WeaponName[2750:2771]:      SwordOfNarzissenkreuz,
-	_WeaponLowerName[2750:2771]: SwordOfNarzissenkreuz,
-	_WeaponName[2771:2789]:      SymphonistOfScents,
-	_WeaponLowerName[2771:2789]: SymphonistOfScents,
-	_WeaponName[2789:2801]:      TalkingStick,
-	_WeaponLowerName[2789:2801]: TalkingStick,
-	_WeaponName[2801:2822]:      TamayurateiNoOhanashi,
-	_WeaponLowerName[2801:2822]: TamayurateiNoOhanashi,
-	_WeaponName[2822:2835]:      TheAlleyFlash,
-	_WeaponLowerName[2822:2835]: TheAlleyFlash,
-	_WeaponName[2835:2842]:      TheBell,
-	_WeaponLowerName[2835:2842]: TheBell,
-	_WeaponName[2842:2855]:      TheBlackSword,
-	_WeaponLowerName[2842:2855]: TheBlackSword,
-	_WeaponName[2855:2863]:      TheCatch,
-	_WeaponLowerName[2855:2863]: TheCatch,
-	_WeaponName[2863:2884]:      TheDockhandsAssistant,
-	_WeaponLowerName[2863:2884]: TheDockhandsAssistant,
-	_WeaponName[2884:2902]:      TheFirstGreatMagic,
-	_WeaponLowerName[2884:2902]: TheFirstGreatMagic,
-	_WeaponName[2902:2910]:      TheFlute,
-	_WeaponLowerName[2902:2910]: TheFlute,
-	_WeaponName[2910:2923]:      TheStringless,
-	_WeaponLowerName[2910:2923]: TheStringless,
-	_WeaponName[2923:2934]:      TheUnforged,
-	_WeaponLowerName[2923:2934]: TheUnforged,
-	_WeaponName[2934:2952]:      TheViridescentHunt,
-	_WeaponLowerName[2934:2952]: TheViridescentHunt,
-	_WeaponName[2952:2962]:      TheWidsith,
-	_WeaponLowerName[2952:2962]: TheWidsith,
-	_WeaponName[2962:2991]:      ThrillingTalesOfDragonSlayers,
-	_WeaponLowerName[2962:2991]: ThrillingTalesOfDragonSlayers,
-	_WeaponName[2991:3006]:      ThunderingPulse,
-	_WeaponLowerName[2991:3006]: ThunderingPulse,
-	_WeaponName[3006:3017]:      TidalShadow,
-	_WeaponLowerName[3006:3017]: TidalShadow,
-	_WeaponName[3017:3037]:      TomeOfTheEternalFlow,
-	_WeaponLowerName[3017:3037]: TomeOfTheEternalFlow,
-	_WeaponName[3037:3052]:      ToukabouShigure,
-	_WeaponLowerName[3037:3052]: ToukabouShigure,
-	_WeaponName[3052:3071]:      TravelersHandySword,
-	_WeaponLowerName[3052:3071]: TravelersHandySword,
-	_WeaponName[3071:3094]:      TulaytullahsRemembrance,
-	_WeaponLowerName[3071:3094]: TulaytullahsRemembrance,
-	_WeaponName[3094:3106]:      TwinNephrite,
-	_WeaponLowerName[3094:3106]: TwinNephrite,
-	_WeaponName[3106:3137]:      UltimateOverlordsMegaMagicSword,
-	_WeaponLowerName[3106:3137]: UltimateOverlordsMegaMagicSword,
-	_WeaponName[3137:3150]:      UrakuMisugiri,
-	_WeaponLowerName[3137:3150]: UrakuMisugiri,
-	_WeaponName[3150:3157]:      Verdict,
-	_WeaponLowerName[3150:3157]: Verdict,
-	_WeaponName[3157:3169]:      VividNotions,
-	_WeaponLowerName[3157:3169]: VividNotions,
-	_WeaponName[3169:3185]:      VortexVanquisher,
-	_WeaponLowerName[3169:3185]: VortexVanquisher,
-	_WeaponName[3185:3202]:      WanderingEvenstar,
-	_WeaponLowerName[3185:3202]: WanderingEvenstar,
-	_WeaponName[3202:3218]:      WasterGreatsword,
-	_WeaponLowerName[3202:3218]: WasterGreatsword,
-	_WeaponName[3218:3233]:      WavebreakersFin,
-	_WeaponLowerName[3218:3233]: WavebreakersFin,
-	_WeaponName[3233:3248]:      WaveridingWhirl,
-	_WeaponLowerName[3233:3248]: WaveridingWhirl,
-	_WeaponName[3248:3258]:      Whiteblind,
-	_WeaponLowerName[3248:3258]: Whiteblind,
-	_WeaponName[3258:3277]:      WhiteIronGreatsword,
-	_WeaponLowerName[3258:3277]: WhiteIronGreatsword,
-	_WeaponName[3277:3288]:      WhiteTassel,
-	_WeaponLowerName[3277:3288]: WhiteTassel,
-	_WeaponName[3288:3300]:      WindblumeOde,
-	_WeaponLowerName[3288:3300]: WindblumeOde,
-	_WeaponName[3300:3311]:      WineAndSong,
-	_WeaponLowerName[3300:3311]: WineAndSong,
-	_WeaponName[3311:3319]:      WolfFang,
-	_WeaponLowerName[3311:3319]: WolfFang,
-	_WeaponName[3319:3334]:      WolfsGravestone,
-	_WeaponLowerName[3319:3334]: WolfsGravestone,
-	_WeaponName[3334:3349]:      XiphosMoonlight,
-	_WeaponLowerName[3334:3349]: XiphosMoonlight,
-	_WeaponName[3349:3362]:      InvalidWeapon,
-	_WeaponLowerName[3349:3362]: InvalidWeapon,
+	_WeaponName[1000:1018]:      FlameForgedInsight,
+	_WeaponLowerName[1000:1018]: FlameForgedInsight,
+	_WeaponName[1018:1038]:      FleuveCendreFerryman,
+	_WeaponLowerName[1018:1038]: FleuveCendreFerryman,
+	_WeaponName[1038:1060]:      FlowerWreathedFeathers,
+	_WeaponLowerName[1038:1060]: FlowerWreathedFeathers,
+	_WeaponName[1060:1073]:      FlowingPurity,
+	_WeaponLowerName[1060:1073]: FlowingPurity,
+	_WeaponName[1073:1088]:      FluteOfEzpitzal,
+	_WeaponLowerName[1073:1088]: FluteOfEzpitzal,
+	_WeaponName[1088:1109]:      FootprintOfTheRainbow,
+	_WeaponLowerName[1088:1109]: FootprintOfTheRainbow,
+	_WeaponName[1109:1122]:      ForestRegalia,
+	_WeaponLowerName[1109:1122]: ForestRegalia,
+	_WeaponName[1122:1135]:      FracturedHalo,
+	_WeaponLowerName[1122:1135]: FracturedHalo,
+	_WeaponName[1135:1147]:      FreedomSworn,
+	_WeaponLowerName[1135:1147]: FreedomSworn,
+	_WeaponName[1147:1158]:      Frostbearer,
+	_WeaponLowerName[1147:1158]: Frostbearer,
+	_WeaponName[1158:1170]:      FruitfulHook,
+	_WeaponLowerName[1158:1170]: FruitfulHook,
+	_WeaponName[1170:1188]:      FruitOfFulfillment,
+	_WeaponLowerName[1170:1188]: FruitOfFulfillment,
+	_WeaponName[1188:1207]:      GestOfTheMightyWolf,
+	_WeaponLowerName[1188:1207]: GestOfTheMightyWolf,
+	_WeaponName[1207:1219]:      HakushinRing,
+	_WeaponLowerName[1207:1219]: HakushinRing,
+	_WeaponName[1219:1226]:      Halberd,
+	_WeaponLowerName[1219:1226]: Halberd,
+	_WeaponName[1226:1234]:      Hamayumi,
+	_WeaponLowerName[1226:1234]: Hamayumi,
+	_WeaponName[1234:1251]:      HaranGeppakuFutsu,
+	_WeaponLowerName[1234:1251]: HaranGeppakuFutsu,
+	_WeaponName[1251:1266]:      HarbingerOfDawn,
+	_WeaponLowerName[1251:1266]: HarbingerOfDawn,
+	_WeaponName[1266:1276]:      HuntersBow,
+	_WeaponLowerName[1266:1276]: HuntersBow,
+	_WeaponName[1276:1287]:      HuntersPath,
+	_WeaponLowerName[1276:1287]: HuntersPath,
+	_WeaponName[1287:1298]:      IbisPiercer,
+	_WeaponLowerName[1287:1298]: IbisPiercer,
+	_WeaponName[1298:1307]:      IronPoint,
+	_WeaponLowerName[1298:1307]: IronPoint,
+	_WeaponName[1307:1316]:      IronSting,
+	_WeaponLowerName[1307:1316]: IronSting,
+	_WeaponName[1316:1333]:      JadefallsSplendor,
+	_WeaponLowerName[1316:1333]: JadefallsSplendor,
+	_WeaponName[1333:1350]:      KagotsurubeIsshin,
+	_WeaponLowerName[1333:1350]: KagotsurubeIsshin,
+	_WeaponName[1350:1363]:      KagurasVerity,
+	_WeaponLowerName[1350:1363]: KagurasVerity,
+	_WeaponName[1363:1384]:      KatsuragikiriNagamasa,
+	_WeaponLowerName[1363:1384]: KatsuragikiriNagamasa,
+	_WeaponName[1384:1398]:      KeyOfKhajNisut,
+	_WeaponLowerName[1384:1398]: KeyOfKhajNisut,
+	_WeaponName[1398:1409]:      KingsSquire,
+	_WeaponLowerName[1398:1409]: KingsSquire,
+	_WeaponName[1409:1425]:      KitainCrossSpear,
+	_WeaponLowerName[1409:1425]: KitainCrossSpear,
+	_WeaponName[1425:1446]:      LightOfFoliarIncision,
+	_WeaponLowerName[1425:1446]: LightOfFoliarIncision,
+	_WeaponName[1446:1455]:      LionsRoar,
+	_WeaponLowerName[1446:1455]: LionsRoar,
+	_WeaponName[1455:1466]:      LithicBlade,
+	_WeaponLowerName[1455:1466]: LithicBlade,
+	_WeaponName[1466:1477]:      LithicSpear,
+	_WeaponLowerName[1466:1477]: LithicSpear,
+	_WeaponName[1477:1503]:      LostPrayerToTheSacredWinds,
+	_WeaponLowerName[1477:1503]: LostPrayerToTheSacredWinds,
+	_WeaponName[1503:1517]:      LumidouceElegy,
+	_WeaponLowerName[1503:1517]: LumidouceElegy,
+	_WeaponName[1517:1533]:      LuxuriousSeaLord,
+	_WeaponLowerName[1517:1533]: LuxuriousSeaLord,
+	_WeaponName[1533:1543]:      MagicGuide,
+	_WeaponLowerName[1533:1543]: MagicGuide,
+	_WeaponName[1543:1555]:      MailedFlower,
+	_WeaponLowerName[1543:1555]: MailedFlower,
+	_WeaponName[1555:1573]:      MakhairaAquamarine,
+	_WeaponLowerName[1555:1573]: MakhairaAquamarine,
+	_WeaponName[1573:1582]:      MappaMare,
+	_WeaponLowerName[1573:1582]: MappaMare,
+	_WeaponName[1582:1591]:      MasterKey,
+	_WeaponLowerName[1582:1591]: MasterKey,
+	_WeaponName[1591:1603]:      MemoryOfDust,
+	_WeaponLowerName[1591:1603]: MemoryOfDust,
+	_WeaponName[1603:1612]:      Messenger,
+	_WeaponLowerName[1603:1612]: Messenger,
+	_WeaponName[1612:1628]:      MissiveWindspear,
+	_WeaponLowerName[1612:1628]: MissiveWindspear,
+	_WeaponName[1628:1648]:      MistsplitterReforged,
+	_WeaponLowerName[1628:1648]: MistsplitterReforged,
+	_WeaponName[1648:1665]:      MitternachtsWaltz,
+	_WeaponLowerName[1648:1665]: MitternachtsWaltz,
+	_WeaponName[1665:1676]:      Moonpiercer,
+	_WeaponLowerName[1665:1676]: Moonpiercer,
+	_WeaponName[1676:1691]:      MoonweaversDawn,
+	_WeaponLowerName[1676:1691]: MoonweaversDawn,
+	_WeaponName[1691:1710]:      MountainBracingBolt,
+	_WeaponLowerName[1691:1710]: MountainBracingBolt,
+	_WeaponName[1710:1720]:      MouunsMoon,
+	_WeaponLowerName[1710:1720]: MouunsMoon,
+	_WeaponName[1720:1744]:      NightweaversLookingGlass,
+	_WeaponLowerName[1720:1744]: NightweaversLookingGlass,
+	_WeaponName[1744:1764]:      NocturnesCurtainCall,
+	_WeaponLowerName[1744:1764]: NocturnesCurtainCall,
+	_WeaponName[1764:1776]:      OathswornEye,
+	_WeaponLowerName[1764:1776]: OathswornEye,
+	_WeaponName[1776:1787]:      OldMercsPal,
+	_WeaponLowerName[1776:1787]: OldMercsPal,
+	_WeaponName[1787:1804]:      OtherworldlyStory,
+	_WeaponLowerName[1787:1804]: OtherworldlyStory,
+	_WeaponName[1804:1818]:      PeakPatrolSong,
+	_WeaponLowerName[1804:1818]: PeakPatrolSong,
+	_WeaponName[1818:1832]:      PocketGrimoire,
+	_WeaponLowerName[1818:1832]: PocketGrimoire,
+	_WeaponName[1832:1841]:      PolarStar,
+	_WeaponLowerName[1832:1841]: PolarStar,
+	_WeaponName[1841:1857]:      PortablePowerSaw,
+	_WeaponLowerName[1841:1857]: PortablePowerSaw,
+	_WeaponName[1857:1865]:      Predator,
+	_WeaponLowerName[1857:1865]: Predator,
+	_WeaponName[1865:1885]:      PrimordialJadeCutter,
+	_WeaponLowerName[1865:1885]: PrimordialJadeCutter,
+	_WeaponName[1885:1910]:      PrimordialJadeWingedSpear,
+	_WeaponLowerName[1885:1910]: PrimordialJadeWingedSpear,
+	_WeaponName[1910:1926]:      ProspectorsDrill,
+	_WeaponLowerName[1910:1926]: ProspectorsDrill,
+	_WeaponName[1926:1943]:      ProspectorsShovel,
+	_WeaponLowerName[1926:1943]: ProspectorsShovel,
+	_WeaponName[1943:1957]:      PrototypeAmber,
+	_WeaponLowerName[1943:1957]: PrototypeAmber,
+	_WeaponName[1957:1973]:      PrototypeArchaic,
+	_WeaponLowerName[1957:1973]: PrototypeArchaic,
+	_WeaponName[1973:1990]:      PrototypeCrescent,
+	_WeaponLowerName[1973:1990]: PrototypeCrescent,
+	_WeaponName[1990:2006]:      PrototypeRancour,
+	_WeaponLowerName[1990:2006]: PrototypeRancour,
+	_WeaponName[2006:2026]:      PrototypeStarglitter,
+	_WeaponLowerName[2006:2026]: PrototypeStarglitter,
+	_WeaponName[2026:2048]:      RainbowSerpentsRainBow,
+	_WeaponLowerName[2026:2048]: RainbowSerpentsRainBow,
+	_WeaponName[2048:2059]:      Rainslasher,
+	_WeaponLowerName[2048:2059]: Rainslasher,
+	_WeaponName[2059:2069]:      RangeGauge,
+	_WeaponLowerName[2059:2069]: RangeGauge,
+	_WeaponName[2069:2077]:      RavenBow,
+	_WeaponLowerName[2069:2077]: RavenBow,
+	_WeaponName[2077:2087]:      RecurveBow,
+	_WeaponLowerName[2077:2087]: RecurveBow,
+	_WeaponName[2087:2107]:      RedhornStonethresher,
+	_WeaponLowerName[2087:2107]: RedhornStonethresher,
+	_WeaponName[2107:2123]:      ReliquaryOfTruth,
+	_WeaponLowerName[2107:2123]: ReliquaryOfTruth,
+	_WeaponName[2123:2137]:      RightfulReward,
+	_WeaponLowerName[2123:2137]: RightfulReward,
+	_WeaponName[2137:2149]:      RingOfYaxche,
+	_WeaponLowerName[2137:2149]: RingOfYaxche,
+	_WeaponName[2149:2157]:      RoyalBow,
+	_WeaponLowerName[2149:2157]: RoyalBow,
+	_WeaponName[2157:2172]:      RoyalGreatsword,
+	_WeaponLowerName[2157:2172]: RoyalGreatsword,
+	_WeaponName[2172:2185]:      RoyalGrimoire,
+	_WeaponLowerName[2172:2185]: RoyalGrimoire,
+	_WeaponName[2185:2199]:      RoyalLongsword,
+	_WeaponLowerName[2185:2199]: RoyalLongsword,
+	_WeaponName[2199:2209]:      RoyalSpear,
+	_WeaponLowerName[2199:2209]: RoyalSpear,
+	_WeaponName[2209:2213]:      Rust,
+	_WeaponLowerName[2209:2213]: Rust,
+	_WeaponName[2213:2229]:      SacrificersStaff,
+	_WeaponLowerName[2213:2229]: SacrificersStaff,
+	_WeaponName[2229:2243]:      SacrificialBow,
+	_WeaponLowerName[2229:2243]: SacrificialBow,
+	_WeaponName[2243:2263]:      SacrificialFragments,
+	_WeaponLowerName[2243:2263]: SacrificialFragments,
+	_WeaponName[2263:2284]:      SacrificialGreatsword,
+	_WeaponLowerName[2263:2284]: SacrificialGreatsword,
+	_WeaponName[2284:2299]:      SacrificialJade,
+	_WeaponLowerName[2284:2299]: SacrificialJade,
+	_WeaponName[2299:2315]:      SacrificialSword,
+	_WeaponLowerName[2299:2315]: SacrificialSword,
+	_WeaponName[2315:2327]:      SapwoodBlade,
+	_WeaponLowerName[2315:2327]: SapwoodBlade,
+	_WeaponName[2327:2347]:      ScionOfTheBlazingSun,
+	_WeaponLowerName[2327:2347]: ScionOfTheBlazingSun,
+	_WeaponName[2347:2365]:      SeasonedHuntersBow,
+	_WeaponLowerName[2347:2365]: SeasonedHuntersBow,
+	_WeaponName[2365:2383]:      SequenceOfSolitude,
+	_WeaponLowerName[2365:2383]: SequenceOfSolitude,
+	_WeaponName[2383:2396]:      SerenitysCall,
+	_WeaponLowerName[2383:2396]: SerenitysCall,
+	_WeaponName[2396:2408]:      SerpentSpine,
+	_WeaponLowerName[2396:2408]: SerpentSpine,
+	_WeaponName[2408:2425]:      SharpshootersOath,
+	_WeaponLowerName[2408:2425]: SharpshootersOath,
+	_WeaponName[2425:2449]:      SilvershowerHeartstrings,
+	_WeaponLowerName[2425:2449]: SilvershowerHeartstrings,
+	_WeaponName[2449:2460]:      SilverSword,
+	_WeaponLowerName[2449:2460]: SilverSword,
+	_WeaponName[2460:2478]:      SkyriderGreatsword,
+	_WeaponLowerName[2460:2478]: SkyriderGreatsword,
+	_WeaponName[2478:2491]:      SkyriderSword,
+	_WeaponLowerName[2478:2491]: SkyriderSword,
+	_WeaponName[2491:2503]:      SkywardAtlas,
+	_WeaponLowerName[2491:2503]: SkywardAtlas,
+	_WeaponName[2503:2515]:      SkywardBlade,
+	_WeaponLowerName[2503:2515]: SkywardBlade,
+	_WeaponName[2515:2526]:      SkywardHarp,
+	_WeaponLowerName[2515:2526]: SkywardHarp,
+	_WeaponName[2526:2538]:      SkywardPride,
+	_WeaponLowerName[2526:2538]: SkywardPride,
+	_WeaponName[2538:2550]:      SkywardSpine,
+	_WeaponLowerName[2538:2550]: SkywardSpine,
+	_WeaponName[2550:2559]:      Slingshot,
+	_WeaponLowerName[2550:2559]: Slingshot,
+	_WeaponName[2559:2568]:      SnareHook,
+	_WeaponLowerName[2559:2568]: SnareHook,
+	_WeaponName[2568:2588]:      SnowTombedStarsilver,
+	_WeaponLowerName[2568:2588]: SnowTombedStarsilver,
+	_WeaponName[2588:2598]:      SolarPearl,
+	_WeaponLowerName[2588:2598]: SolarPearl,
+	_WeaponName[2598:2615]:      SongOfBrokenPines,
+	_WeaponLowerName[2598:2615]: SongOfBrokenPines,
+	_WeaponName[2615:2630]:      SongOfStillness,
+	_WeaponLowerName[2615:2630]: SongOfStillness,
+	_WeaponName[2630:2654]:      SplendorOfTranquilWaters,
+	_WeaponLowerName[2630:2654]: SplendorOfTranquilWaters,
+	_WeaponName[2654:2665]:      StaffOfHoma,
+	_WeaponLowerName[2654:2665]: StaffOfHoma,
+	_WeaponName[2665:2687]:      StaffOfTheScarletSands,
+	_WeaponLowerName[2665:2687]: StaffOfTheScarletSands,
+	_WeaponName[2687:2703]:      StarcallersWatch,
+	_WeaponLowerName[2687:2703]: StarcallersWatch,
+	_WeaponName[2703:2713]:      SturdyBone,
+	_WeaponLowerName[2703:2713]: SturdyBone,
+	_WeaponName[2713:2725]:      SummitShaper,
+	_WeaponLowerName[2713:2725]: SummitShaper,
+	_WeaponName[2725:2744]:      SunnyMorningSleepIn,
+	_WeaponLowerName[2725:2744]: SunnyMorningSleepIn,
+	_WeaponName[2744:2751]:      SurfsUp,
+	_WeaponLowerName[2744:2751]: SurfsUp,
+	_WeaponName[2751:2768]:      SwordOfDescension,
+	_WeaponLowerName[2751:2768]: SwordOfDescension,
+	_WeaponName[2768:2789]:      SwordOfNarzissenkreuz,
+	_WeaponLowerName[2768:2789]: SwordOfNarzissenkreuz,
+	_WeaponName[2789:2807]:      SymphonistOfScents,
+	_WeaponLowerName[2789:2807]: SymphonistOfScents,
+	_WeaponName[2807:2819]:      TalkingStick,
+	_WeaponLowerName[2807:2819]: TalkingStick,
+	_WeaponName[2819:2840]:      TamayurateiNoOhanashi,
+	_WeaponLowerName[2819:2840]: TamayurateiNoOhanashi,
+	_WeaponName[2840:2853]:      TheAlleyFlash,
+	_WeaponLowerName[2840:2853]: TheAlleyFlash,
+	_WeaponName[2853:2860]:      TheBell,
+	_WeaponLowerName[2853:2860]: TheBell,
+	_WeaponName[2860:2873]:      TheBlackSword,
+	_WeaponLowerName[2860:2873]: TheBlackSword,
+	_WeaponName[2873:2881]:      TheCatch,
+	_WeaponLowerName[2873:2881]: TheCatch,
+	_WeaponName[2881:2902]:      TheDockhandsAssistant,
+	_WeaponLowerName[2881:2902]: TheDockhandsAssistant,
+	_WeaponName[2902:2920]:      TheFirstGreatMagic,
+	_WeaponLowerName[2902:2920]: TheFirstGreatMagic,
+	_WeaponName[2920:2928]:      TheFlute,
+	_WeaponLowerName[2920:2928]: TheFlute,
+	_WeaponName[2928:2941]:      TheStringless,
+	_WeaponLowerName[2928:2941]: TheStringless,
+	_WeaponName[2941:2952]:      TheUnforged,
+	_WeaponLowerName[2941:2952]: TheUnforged,
+	_WeaponName[2952:2970]:      TheViridescentHunt,
+	_WeaponLowerName[2952:2970]: TheViridescentHunt,
+	_WeaponName[2970:2980]:      TheWidsith,
+	_WeaponLowerName[2970:2980]: TheWidsith,
+	_WeaponName[2980:3009]:      ThrillingTalesOfDragonSlayers,
+	_WeaponLowerName[2980:3009]: ThrillingTalesOfDragonSlayers,
+	_WeaponName[3009:3024]:      ThunderingPulse,
+	_WeaponLowerName[3009:3024]: ThunderingPulse,
+	_WeaponName[3024:3035]:      TidalShadow,
+	_WeaponLowerName[3024:3035]: TidalShadow,
+	_WeaponName[3035:3055]:      TomeOfTheEternalFlow,
+	_WeaponLowerName[3035:3055]: TomeOfTheEternalFlow,
+	_WeaponName[3055:3070]:      ToukabouShigure,
+	_WeaponLowerName[3055:3070]: ToukabouShigure,
+	_WeaponName[3070:3089]:      TravelersHandySword,
+	_WeaponLowerName[3070:3089]: TravelersHandySword,
+	_WeaponName[3089:3112]:      TulaytullahsRemembrance,
+	_WeaponLowerName[3089:3112]: TulaytullahsRemembrance,
+	_WeaponName[3112:3124]:      TwinNephrite,
+	_WeaponLowerName[3112:3124]: TwinNephrite,
+	_WeaponName[3124:3155]:      UltimateOverlordsMegaMagicSword,
+	_WeaponLowerName[3124:3155]: UltimateOverlordsMegaMagicSword,
+	_WeaponName[3155:3168]:      UrakuMisugiri,
+	_WeaponLowerName[3155:3168]: UrakuMisugiri,
+	_WeaponName[3168:3175]:      Verdict,
+	_WeaponLowerName[3168:3175]: Verdict,
+	_WeaponName[3175:3187]:      VividNotions,
+	_WeaponLowerName[3175:3187]: VividNotions,
+	_WeaponName[3187:3203]:      VortexVanquisher,
+	_WeaponLowerName[3187:3203]: VortexVanquisher,
+	_WeaponName[3203:3220]:      WanderingEvenstar,
+	_WeaponLowerName[3203:3220]: WanderingEvenstar,
+	_WeaponName[3220:3236]:      WasterGreatsword,
+	_WeaponLowerName[3220:3236]: WasterGreatsword,
+	_WeaponName[3236:3251]:      WavebreakersFin,
+	_WeaponLowerName[3236:3251]: WavebreakersFin,
+	_WeaponName[3251:3266]:      WaveridingWhirl,
+	_WeaponLowerName[3251:3266]: WaveridingWhirl,
+	_WeaponName[3266:3276]:      Whiteblind,
+	_WeaponLowerName[3266:3276]: Whiteblind,
+	_WeaponName[3276:3295]:      WhiteIronGreatsword,
+	_WeaponLowerName[3276:3295]: WhiteIronGreatsword,
+	_WeaponName[3295:3306]:      WhiteTassel,
+	_WeaponLowerName[3295:3306]: WhiteTassel,
+	_WeaponName[3306:3318]:      WindblumeOde,
+	_WeaponLowerName[3306:3318]: WindblumeOde,
+	_WeaponName[3318:3329]:      WineAndSong,
+	_WeaponLowerName[3318:3329]: WineAndSong,
+	_WeaponName[3329:3337]:      WolfFang,
+	_WeaponLowerName[3329:3337]: WolfFang,
+	_WeaponName[3337:3352]:      WolfsGravestone,
+	_WeaponLowerName[3337:3352]: WolfsGravestone,
+	_WeaponName[3352:3367]:      XiphosMoonlight,
+	_WeaponLowerName[3352:3367]: XiphosMoonlight,
+	_WeaponName[3367:3380]:      InvalidWeapon,
+	_WeaponLowerName[3367:3380]: InvalidWeapon,
 }
 
 var _WeaponNames = []string{
@@ -791,168 +794,169 @@ var _WeaponNames = []string{
 	_WeaponName[959:974],
 	_WeaponName[974:985],
 	_WeaponName[985:1000],
-	_WeaponName[1000:1020],
-	_WeaponName[1020:1042],
-	_WeaponName[1042:1055],
-	_WeaponName[1055:1070],
-	_WeaponName[1070:1091],
-	_WeaponName[1091:1104],
-	_WeaponName[1104:1117],
-	_WeaponName[1117:1129],
-	_WeaponName[1129:1140],
-	_WeaponName[1140:1152],
-	_WeaponName[1152:1170],
-	_WeaponName[1170:1189],
-	_WeaponName[1189:1201],
-	_WeaponName[1201:1208],
-	_WeaponName[1208:1216],
-	_WeaponName[1216:1233],
-	_WeaponName[1233:1248],
-	_WeaponName[1248:1258],
-	_WeaponName[1258:1269],
-	_WeaponName[1269:1280],
-	_WeaponName[1280:1289],
-	_WeaponName[1289:1298],
-	_WeaponName[1298:1315],
-	_WeaponName[1315:1332],
-	_WeaponName[1332:1345],
-	_WeaponName[1345:1366],
-	_WeaponName[1366:1380],
-	_WeaponName[1380:1391],
-	_WeaponName[1391:1407],
-	_WeaponName[1407:1428],
-	_WeaponName[1428:1437],
-	_WeaponName[1437:1448],
-	_WeaponName[1448:1459],
-	_WeaponName[1459:1485],
-	_WeaponName[1485:1499],
-	_WeaponName[1499:1515],
-	_WeaponName[1515:1525],
-	_WeaponName[1525:1537],
-	_WeaponName[1537:1555],
-	_WeaponName[1555:1564],
-	_WeaponName[1564:1573],
-	_WeaponName[1573:1585],
-	_WeaponName[1585:1594],
-	_WeaponName[1594:1610],
-	_WeaponName[1610:1630],
-	_WeaponName[1630:1647],
-	_WeaponName[1647:1658],
-	_WeaponName[1658:1673],
-	_WeaponName[1673:1692],
-	_WeaponName[1692:1702],
-	_WeaponName[1702:1726],
-	_WeaponName[1726:1746],
-	_WeaponName[1746:1758],
-	_WeaponName[1758:1769],
-	_WeaponName[1769:1786],
-	_WeaponName[1786:1800],
-	_WeaponName[1800:1814],
-	_WeaponName[1814:1823],
-	_WeaponName[1823:1839],
-	_WeaponName[1839:1847],
-	_WeaponName[1847:1867],
-	_WeaponName[1867:1892],
-	_WeaponName[1892:1908],
-	_WeaponName[1908:1925],
-	_WeaponName[1925:1939],
-	_WeaponName[1939:1955],
-	_WeaponName[1955:1972],
-	_WeaponName[1972:1988],
-	_WeaponName[1988:2008],
-	_WeaponName[2008:2030],
-	_WeaponName[2030:2041],
-	_WeaponName[2041:2051],
-	_WeaponName[2051:2059],
+	_WeaponName[1000:1018],
+	_WeaponName[1018:1038],
+	_WeaponName[1038:1060],
+	_WeaponName[1060:1073],
+	_WeaponName[1073:1088],
+	_WeaponName[1088:1109],
+	_WeaponName[1109:1122],
+	_WeaponName[1122:1135],
+	_WeaponName[1135:1147],
+	_WeaponName[1147:1158],
+	_WeaponName[1158:1170],
+	_WeaponName[1170:1188],
+	_WeaponName[1188:1207],
+	_WeaponName[1207:1219],
+	_WeaponName[1219:1226],
+	_WeaponName[1226:1234],
+	_WeaponName[1234:1251],
+	_WeaponName[1251:1266],
+	_WeaponName[1266:1276],
+	_WeaponName[1276:1287],
+	_WeaponName[1287:1298],
+	_WeaponName[1298:1307],
+	_WeaponName[1307:1316],
+	_WeaponName[1316:1333],
+	_WeaponName[1333:1350],
+	_WeaponName[1350:1363],
+	_WeaponName[1363:1384],
+	_WeaponName[1384:1398],
+	_WeaponName[1398:1409],
+	_WeaponName[1409:1425],
+	_WeaponName[1425:1446],
+	_WeaponName[1446:1455],
+	_WeaponName[1455:1466],
+	_WeaponName[1466:1477],
+	_WeaponName[1477:1503],
+	_WeaponName[1503:1517],
+	_WeaponName[1517:1533],
+	_WeaponName[1533:1543],
+	_WeaponName[1543:1555],
+	_WeaponName[1555:1573],
+	_WeaponName[1573:1582],
+	_WeaponName[1582:1591],
+	_WeaponName[1591:1603],
+	_WeaponName[1603:1612],
+	_WeaponName[1612:1628],
+	_WeaponName[1628:1648],
+	_WeaponName[1648:1665],
+	_WeaponName[1665:1676],
+	_WeaponName[1676:1691],
+	_WeaponName[1691:1710],
+	_WeaponName[1710:1720],
+	_WeaponName[1720:1744],
+	_WeaponName[1744:1764],
+	_WeaponName[1764:1776],
+	_WeaponName[1776:1787],
+	_WeaponName[1787:1804],
+	_WeaponName[1804:1818],
+	_WeaponName[1818:1832],
+	_WeaponName[1832:1841],
+	_WeaponName[1841:1857],
+	_WeaponName[1857:1865],
+	_WeaponName[1865:1885],
+	_WeaponName[1885:1910],
+	_WeaponName[1910:1926],
+	_WeaponName[1926:1943],
+	_WeaponName[1943:1957],
+	_WeaponName[1957:1973],
+	_WeaponName[1973:1990],
+	_WeaponName[1990:2006],
+	_WeaponName[2006:2026],
+	_WeaponName[2026:2048],
+	_WeaponName[2048:2059],
 	_WeaponName[2059:2069],
-	_WeaponName[2069:2089],
-	_WeaponName[2089:2105],
-	_WeaponName[2105:2119],
-	_WeaponName[2119:2131],
-	_WeaponName[2131:2139],
-	_WeaponName[2139:2154],
-	_WeaponName[2154:2167],
-	_WeaponName[2167:2181],
-	_WeaponName[2181:2191],
-	_WeaponName[2191:2195],
-	_WeaponName[2195:2211],
-	_WeaponName[2211:2225],
-	_WeaponName[2225:2245],
-	_WeaponName[2245:2266],
-	_WeaponName[2266:2281],
-	_WeaponName[2281:2297],
-	_WeaponName[2297:2309],
-	_WeaponName[2309:2329],
-	_WeaponName[2329:2347],
+	_WeaponName[2069:2077],
+	_WeaponName[2077:2087],
+	_WeaponName[2087:2107],
+	_WeaponName[2107:2123],
+	_WeaponName[2123:2137],
+	_WeaponName[2137:2149],
+	_WeaponName[2149:2157],
+	_WeaponName[2157:2172],
+	_WeaponName[2172:2185],
+	_WeaponName[2185:2199],
+	_WeaponName[2199:2209],
+	_WeaponName[2209:2213],
+	_WeaponName[2213:2229],
+	_WeaponName[2229:2243],
+	_WeaponName[2243:2263],
+	_WeaponName[2263:2284],
+	_WeaponName[2284:2299],
+	_WeaponName[2299:2315],
+	_WeaponName[2315:2327],
+	_WeaponName[2327:2347],
 	_WeaponName[2347:2365],
-	_WeaponName[2365:2378],
-	_WeaponName[2378:2390],
-	_WeaponName[2390:2407],
-	_WeaponName[2407:2431],
-	_WeaponName[2431:2442],
-	_WeaponName[2442:2460],
-	_WeaponName[2460:2473],
-	_WeaponName[2473:2485],
-	_WeaponName[2485:2497],
-	_WeaponName[2497:2508],
-	_WeaponName[2508:2520],
-	_WeaponName[2520:2532],
-	_WeaponName[2532:2541],
-	_WeaponName[2541:2550],
-	_WeaponName[2550:2570],
-	_WeaponName[2570:2580],
-	_WeaponName[2580:2597],
-	_WeaponName[2597:2612],
-	_WeaponName[2612:2636],
-	_WeaponName[2636:2647],
-	_WeaponName[2647:2669],
-	_WeaponName[2669:2685],
-	_WeaponName[2685:2695],
-	_WeaponName[2695:2707],
-	_WeaponName[2707:2726],
-	_WeaponName[2726:2733],
-	_WeaponName[2733:2750],
-	_WeaponName[2750:2771],
-	_WeaponName[2771:2789],
-	_WeaponName[2789:2801],
-	_WeaponName[2801:2822],
-	_WeaponName[2822:2835],
-	_WeaponName[2835:2842],
-	_WeaponName[2842:2855],
-	_WeaponName[2855:2863],
-	_WeaponName[2863:2884],
-	_WeaponName[2884:2902],
-	_WeaponName[2902:2910],
-	_WeaponName[2910:2923],
-	_WeaponName[2923:2934],
-	_WeaponName[2934:2952],
-	_WeaponName[2952:2962],
-	_WeaponName[2962:2991],
-	_WeaponName[2991:3006],
-	_WeaponName[3006:3017],
-	_WeaponName[3017:3037],
-	_WeaponName[3037:3052],
-	_WeaponName[3052:3071],
-	_WeaponName[3071:3094],
-	_WeaponName[3094:3106],
-	_WeaponName[3106:3137],
-	_WeaponName[3137:3150],
-	_WeaponName[3150:3157],
-	_WeaponName[3157:3169],
-	_WeaponName[3169:3185],
-	_WeaponName[3185:3202],
-	_WeaponName[3202:3218],
-	_WeaponName[3218:3233],
-	_WeaponName[3233:3248],
-	_WeaponName[3248:3258],
-	_WeaponName[3258:3277],
-	_WeaponName[3277:3288],
-	_WeaponName[3288:3300],
-	_WeaponName[3300:3311],
-	_WeaponName[3311:3319],
-	_WeaponName[3319:3334],
-	_WeaponName[3334:3349],
-	_WeaponName[3349:3362],
+	_WeaponName[2365:2383],
+	_WeaponName[2383:2396],
+	_WeaponName[2396:2408],
+	_WeaponName[2408:2425],
+	_WeaponName[2425:2449],
+	_WeaponName[2449:2460],
+	_WeaponName[2460:2478],
+	_WeaponName[2478:2491],
+	_WeaponName[2491:2503],
+	_WeaponName[2503:2515],
+	_WeaponName[2515:2526],
+	_WeaponName[2526:2538],
+	_WeaponName[2538:2550],
+	_WeaponName[2550:2559],
+	_WeaponName[2559:2568],
+	_WeaponName[2568:2588],
+	_WeaponName[2588:2598],
+	_WeaponName[2598:2615],
+	_WeaponName[2615:2630],
+	_WeaponName[2630:2654],
+	_WeaponName[2654:2665],
+	_WeaponName[2665:2687],
+	_WeaponName[2687:2703],
+	_WeaponName[2703:2713],
+	_WeaponName[2713:2725],
+	_WeaponName[2725:2744],
+	_WeaponName[2744:2751],
+	_WeaponName[2751:2768],
+	_WeaponName[2768:2789],
+	_WeaponName[2789:2807],
+	_WeaponName[2807:2819],
+	_WeaponName[2819:2840],
+	_WeaponName[2840:2853],
+	_WeaponName[2853:2860],
+	_WeaponName[2860:2873],
+	_WeaponName[2873:2881],
+	_WeaponName[2881:2902],
+	_WeaponName[2902:2920],
+	_WeaponName[2920:2928],
+	_WeaponName[2928:2941],
+	_WeaponName[2941:2952],
+	_WeaponName[2952:2970],
+	_WeaponName[2970:2980],
+	_WeaponName[2980:3009],
+	_WeaponName[3009:3024],
+	_WeaponName[3024:3035],
+	_WeaponName[3035:3055],
+	_WeaponName[3055:3070],
+	_WeaponName[3070:3089],
+	_WeaponName[3089:3112],
+	_WeaponName[3112:3124],
+	_WeaponName[3124:3155],
+	_WeaponName[3155:3168],
+	_WeaponName[3168:3175],
+	_WeaponName[3175:3187],
+	_WeaponName[3187:3203],
+	_WeaponName[3203:3220],
+	_WeaponName[3220:3236],
+	_WeaponName[3236:3251],
+	_WeaponName[3251:3266],
+	_WeaponName[3266:3276],
+	_WeaponName[3276:3295],
+	_WeaponName[3295:3306],
+	_WeaponName[3306:3318],
+	_WeaponName[3318:3329],
+	_WeaponName[3329:3337],
+	_WeaponName[3337:3352],
+	_WeaponName[3352:3367],
+	_WeaponName[3367:3380],
 }
 
 // WeaponString retrieves an enum value from the enum constants string name.
