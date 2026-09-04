@@ -84,29 +84,3 @@ func (c *char) Attack(p map[string]int) (action.Info, error) {
 		State:           action.NormalAttackState,
 	}, nil
 }
-
-func (c *char) HighPlungeAttack(map[string]int) (action.Info, error) {
-	return c.plungeAttack(high[0][c.TalentLvlAttack()])
-}
-
-func (c *char) LowPlungeAttack(map[string]int) (action.Info, error) {
-	return c.plungeAttack(low[0][c.TalentLvlAttack()])
-}
-
-func (c *char) plungeAttack(mult float64) (action.Info, error) {
-	ai := info.AttackInfo{
-		ActorIndex: c.Index(),
-		Abil:       "Plunge",
-		AttackTag:  attacks.AttackTagPlunge,
-		ICDTag:     attacks.ICDTagNone,
-		ICDGroup:   attacks.ICDGroupDefault,
-		StrikeType: attacks.StrikeTypeDefault,
-		Element:    attributes.Dendro,
-		Durability: 25,
-		Mult:       mult,
-	}
-
-	c.Core.QueueAttack(ai, combat.NewCircleHitOnTarget(c.Core.Combat.Player(), nil, 4.5), 1, 1)
-
-	return action.Info{State: action.PlungeAttackState}, nil
-}

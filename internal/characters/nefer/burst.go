@@ -41,7 +41,7 @@ func (c *char) Burst(p map[string]int) (action.Info, error) {
 	stacks := c.consumeVeilStacks()
 	bonus := 0.0
 	if stacks > 0 {
-		bonus = float64(stacks) * veil[0][c.TalentLvlBurst()]
+		bonus = float64(stacks) * veil_bonus[c.TalentLvlBurst()]
 	}
 
 	if bonus > 0 {
@@ -62,25 +62,25 @@ func (c *char) Burst(p map[string]int) (action.Info, error) {
 		ActorIndex: c.Index(),
 		Abil:       "Sacred Vow: True Eye's Phantasm (Hit 1)",
 		AttackTag:  attacks.AttackTagElementalBurst,
-		ICDTag:     attacks.ICDTagElementalBurst,
+		ICDTag:     attacks.ICDTagNeferElementalBurst,
 		ICDGroup:   attacks.ICDGroupDefault,
 		StrikeType: attacks.StrikeTypeDefault,
 		Element:    attributes.Dendro,
 		Durability: 25,
-		Mult:       vow[0][c.TalentLvlBurst()],
-		FlatDmg:    c.Stat(attributes.EM) * vow[1][c.TalentLvlBurst()],
+		Mult:       vow_1_att[c.TalentLvlBurst()],
+		FlatDmg:    c.Stat(attributes.EM) * vow_1_em[c.TalentLvlBurst()],
 	}
 	ai2 := info.AttackInfo{
 		ActorIndex: c.Index(),
 		Abil:       "Sacred Vow: True Eye's Phantasm (Hit 2)",
 		AttackTag:  attacks.AttackTagElementalBurst,
-		ICDTag:     attacks.ICDTagElementalBurst,
+		ICDTag:     attacks.ICDTagNeferElementalBurst,
 		ICDGroup:   attacks.ICDGroupDefault,
 		StrikeType: attacks.StrikeTypeDefault,
 		Element:    attributes.Dendro,
 		Durability: 25,
-		Mult:       vow[2][c.TalentLvlBurst()],
-		FlatDmg:    c.Stat(attributes.EM) * vow[3][c.TalentLvlBurst()],
+		Mult:       vow_2_att[c.TalentLvlBurst()],
+		FlatDmg:    c.Stat(attributes.EM) * vow_2_em[c.TalentLvlBurst()],
 	}
 
 	ap := combat.NewBoxHit(c.Core.Combat.Player(), c.Core.Combat.PrimaryTarget(), nil, 6, 10)

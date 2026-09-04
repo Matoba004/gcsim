@@ -36,8 +36,8 @@ func (c *char) Skill(p map[string]int) (action.Info, error) {
 		StrikeType: attacks.StrikeTypeBlunt,
 		Element:    attributes.Dendro,
 		Durability: 25,
-		Mult:       skill[0][c.TalentLvlSkill()],
-		FlatDmg:    c.Stat(attributes.EM) * skill[1][c.TalentLvlSkill()],
+		Mult:       skill_att[c.TalentLvlSkill()],
+		FlatDmg:    c.Stat(attributes.EM) * skill_em[c.TalentLvlSkill()],
 	}
 
 	c.Core.QueueAttack(ai, combat.NewCircleHit(c.Core.Combat.Player(), c.Core.Combat.PrimaryTarget(), info.Point{Y: 1}, 3), skillHitmark, skillHitmark, c.skillParticleCB)
