@@ -73,6 +73,7 @@ const (
 	BladeOfAtonement                              // bladeofatonement
 	BloodsoakedRuins                              // bloodsoakedruins
 	BloodtaintedGreatsword                        // bloodtaintedgreatsword
+	BreezeborneRefrain                            // breezebornerefrain
 	CalamityOfEshu                                // calamityofeshu
 	CalamityQueller                               // calamityqueller
 	CashflowSupervision                           // cashflowsupervision
@@ -323,6 +324,7 @@ var _WeaponNames = [...]string{
 	"bladeofatonement",
 	"bloodsoakedruins",
 	"bloodtaintedgreatsword",
+	"breezebornerefrain",
 	"calamityofeshu",
 	"calamityqueller",
 	"cashflowsupervision",
@@ -573,6 +575,7 @@ var _WeaponValues = [...]Weapon{
 	BladeOfAtonement,
 	BloodsoakedRuins,
 	BloodtaintedGreatsword,
+	BreezeborneRefrain,
 	CalamityOfEshu,
 	CalamityQueller,
 	CashflowSupervision,
